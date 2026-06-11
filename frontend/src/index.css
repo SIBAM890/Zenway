@@ -1,33 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-@theme {
-  --font-sans: 'Outfit', sans-serif;
-}
-
-body {
-  background-color: #080F0A; /* Premium Air Traffic / Railway dark ops background */
-  color: #E2E8F0;
-  font-family: 'Outfit', sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Custom scrollbar for dark dashboard aesthetics */
+body {
+  background: #f4f5f8;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* Pulse animation for live indicators */
+@keyframes transit-pulse {
+  0% {
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+  100% {
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.live-indicator {
+  animation: transit-pulse 2s infinite;
+}
+
+/* Custom scrollbar for dropdown and lists */
 ::-webkit-scrollbar {
   width: 6px;
-  height: 6px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #0D1C11;
+  background: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #1C3B24;
+  background: #cbd5e1;
   border-radius: 3px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #2D5B3A;
+  background: #94a3b8;
+}
+
+/* Responsive Dashboard Layout Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+.dashboard-full-width {
+  grid-column: 1 / -1;
+}
+
+.dashboard-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

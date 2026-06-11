@@ -1,165 +1,166 @@
-import { useState } from 'react';
-import type { CrowdRiskAssessment } from '../types/surge';
-import { HelpCircle, Info } from 'lucide-react';
-
 interface RiskGaugeProps {
-  assessment: CrowdRiskAssessment;
-  platformName: string;
+  score: number;
+  riskLevel: string;
+  description: string;
+  etaMinutes: number | null;
 }
 
-export function RiskGauge({ assessment, platformName }: RiskGaugeProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const { score, level, contributing_factors, calculated_at } = assessment;
-
-  // Determine colors based on risk level
-  const getColorScheme = () => {
-    switch (level) {
-      case 'Critical':
-        return {
-          stroke: '#EF4444', // Red
-          bg: 'rgba(239, 68, 68, 0.1)',
-          border: 'border-red-900/50',
-          text: 'text-red-400',
-          fill: 'fill-red-500',
-        };
-      case 'Elevated':
-        return {
-          stroke: '#F59E0B', // Amber
-          bg: 'rgba(245, 158, 11, 0.1)',
-          border: 'border-amber-900/50',
-          text: 'text-amber-400',
-          fill: 'fill-amber-500',
-        };
+export function RiskGauge({ score, riskLevel, description, etaMinutes }: RiskGaugeProps) {
+  // Determine background color based on riskLevel
+  const getBackgroundColor = () => {
+    switch (riskLevel) {
+      case 'critical':
+        return '#2563eb';
+      case 'elevated':
+        return '#b45309';
+      case 'normal':
       default:
-        return {
-          stroke: '#10B981', // Green
-          bg: 'rgba(16, 185, 129, 0.1)',
-          border: 'border-emerald-900/30',
-          text: 'text-emerald-400',
-          fill: 'fill-emerald-500',
-        };
+        return '#16a34a';
     }
   };
 
-  const scheme = getColorScheme();
-  
-  // Calculate SVG gauge progress variables
-  const radius = 60;
-  const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = circumference - (score / 100) * circumference;
+  // Determine title based on riskLevel
+  const getTitle = () => {
+    switch (riskLevel) {
+      case 'critical':
+        return 'Critical — act now';
+      case 'elevated':
+        return 'Elevated — monitor closely';
+      case 'normal':
+      default:
+        return 'Normal — all clear';
+    }
+  };
 
   return (
-    <div 
-      className={`bg-[#0D160F] border ${scheme.border} rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 cursor-pointer`}
-      onClick={() => setIsExpanded(!isExpanded)}
-    >
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Sensor Grid</span>
-          <h3 className="text-lg font-bold text-white mt-0.5">{platformName}</h3>
-        </div>
-        <span className={`px-2 py-0.5 text-xs font-bold uppercase rounded-full ${scheme.bg} ${scheme.text} border border-current/30`}>
-          {level}
+    <div style={{
+      borderRadius: '14px',
+      padding: '18px 20px',
+      backgroundColor: getBackgroundColor(),
+      display: 'grid',
+      gridTemplateColumns: '1fr auto',
+      gap: '12px',
+      alignItems: 'center',
+      width: '100%',
+      fontFamily: 'Inter, sans-serif',
+      position: 'relative',
+      overflow: 'hidden'
+    }}>
+      {/* Subtle background SVG illustration */}
+      <svg
+        style={{
+          position: 'absolute',
+          right: 0,
+          bottom: 0,
+          opacity: 0.08,
+          pointerEvents: 'none',
+          height: '100%',
+          overflow: 'hidden'
+        }}
+        viewBox="0 0 300 120"
+        fill="none"
+        stroke="#ffffff"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        {/* Train tracks/platform line */}
+        <line x1="0" y1="100" x2="300" y2="100" />
+        <line x1="0" y1="108" x2="300" y2="108" />
+        
+        {/* Train outline */}
+        <path d="M 0 30 L 120 30 C 135 30, 145 40, 145 55 L 145 100 L 0 100 Z" />
+        <rect x="15" y="45" width="20" height="20" rx="3" />
+        <rect x="45" y="45" width="20" height="20" rx="3" />
+        <rect x="75" y="45" width="20" height="20" rx="3" />
+        <rect x="105" y="45" width="20" height="20" rx="3" />
+        
+        {/* Platform pillar */}
+        <line x1="200" y1="30" x2="200" y2="100" />
+        <line x1="200" y1="30" x2="280" y2="30" />
+        
+        {/* Stick figures (people) */}
+        {/* Person 1 */}
+        <circle cx="170" cy="70" r="5" />
+        <line x1="170" y1="75" x2="170" y2="90" />
+        <line x1="165" y1="80" x2="175" y2="80" />
+        <line x1="170" y1="90" x2="167" y2="100" />
+        <line x1="170" y1="90" x2="173" y2="100" />
+        
+        {/* Person 2 */}
+        <circle cx="220" cy="65" r="5" />
+        <line x1="220" y1="70" x2="220" y2="85" />
+        <line x1="215" y1="75" x2="225" y2="75" />
+        <line x1="220" y1="85" x2="217" y2="98" />
+        <line x1="220" y1="85" x2="223" y2="98" />
+        
+        {/* Person 3 */}
+        <circle cx="250" cy="72" r="5" />
+        <line x1="250" y1="77" x2="250" y2="92" />
+        <line x1="245" y1="82" x2="255" y2="82" />
+        <line x1="250" y1="92" x2="247" y2="100" />
+        <line x1="250" y1="92" x2="253" y2="100" />
+      </svg>
+      {/* Left side */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+        <span style={{
+          fontSize: '11px',
+          color: 'rgba(255, 255, 255, 0.6)',
+          textTransform: 'uppercase',
+          letterSpacing: '0.06em',
+          marginBottom: '4px'
+        }}>
+          Surge risk
+        </span>
+        <h2 style={{
+          fontSize: '22px',
+          fontWeight: 600,
+          color: '#fff',
+          letterSpacing: '-0.01em',
+          lineHeight: '1.1',
+          margin: 0
+        }}>
+          {getTitle()}
+        </h2>
+        <p style={{
+          fontSize: '12px',
+          color: 'rgba(255, 255, 255, 0.65)',
+          marginTop: '6px',
+          lineHeight: '1.5',
+          margin: 0
+        }}>
+          {description}
+        </p>
+      </div>
+
+      {/* Right side */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+        <span style={{
+          fontSize: '10px',
+          color: 'rgba(255, 255, 255, 0.6)',
+          textTransform: 'uppercase',
+          letterSpacing: '0.06em'
+        }}>
+          Score
+        </span>
+        <span style={{
+          fontSize: '44px',
+          fontWeight: 600,
+          color: '#fff',
+          letterSpacing: '-0.02em',
+          lineHeight: '1',
+          textAlign: 'right'
+        }}>
+          {score}
+        </span>
+        <span style={{
+          fontSize: '11px',
+          color: 'rgba(255, 255, 255, 0.6)',
+          textAlign: 'right'
+        }}>
+          / 100
         </span>
       </div>
-
-      <div className="flex flex-col items-center justify-center py-4 relative">
-        <svg className="w-36 h-36 transform -rotate-90">
-          {/* Background track circle */}
-          <circle
-            cx="72"
-            cy="72"
-            r={radius}
-            className="stroke-[#122216]"
-            strokeWidth="8"
-            fill="transparent"
-          />
-          {/* Active progress circle */}
-          <circle
-            cx="72"
-            cy="72"
-            r={radius}
-            stroke={scheme.stroke}
-            strokeWidth="10"
-            fill="transparent"
-            strokeDasharray={circumference}
-            strokeDashoffset={strokeDashoffset}
-            strokeLinecap="round"
-            className="transition-all duration-1000 ease-out"
-          />
-        </svg>
-
-        {/* Score overlay */}
-        <div className="absolute text-center">
-          <span className="text-3xl font-extrabold text-white tracking-tight">{score}%</span>
-          <span className="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-0.5">Surge Capacity</span>
-        </div>
-      </div>
-
-      <div className="flex items-center justify-between text-xs text-gray-400 border-t border-[#1C3B24] pt-3 mt-2">
-        <div className="flex items-center gap-1">
-          <Info className="w-3 h-3 text-gray-500" />
-          <span>Click to audit formula</span>
-        </div>
-        <span className="text-[10px] text-gray-500">
-          Updated: {new Date(calculated_at).toLocaleTimeString()}
-        </span>
-      </div>
-
-      {/* Expandable Explainability Panel */}
-      {isExpanded && (
-        <div 
-          className="mt-4 p-4 bg-[#080E09] border border-[#1C3B24] rounded-lg text-sm text-left transition-all duration-300"
-          onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inner elements
-        >
-          <div className="flex items-center gap-1.5 text-xs text-[#4ADE80] font-semibold uppercase tracking-wider mb-2.5">
-            <HelpCircle className="w-3.5 h-3.5" />
-            Explainability Formula Audit
-          </div>
-
-          <div className="space-y-2 text-xs text-gray-300">
-            <div className="flex justify-between border-b border-[#142618] pb-1.5">
-              <span className="text-gray-500">Platform Limit (Capacity):</span>
-              <span className="font-semibold text-white">{contributing_factors.platform_capacity} pax</span>
-            </div>
-            <div className="flex justify-between border-b border-[#142618] pb-1.5">
-              <span className="text-gray-500">Typical Base Load (Offpeak):</span>
-              <span className="font-semibold text-white">{contributing_factors.typical_load} pax</span>
-            </div>
-            <div className="flex justify-between border-b border-[#142618] pb-1.5">
-              <span className="text-gray-500">Expected Delayed Influx (30m):</span>
-              <span className="font-semibold text-[#FF8A8A] font-mono">
-                +{contributing_factors.expected_passengers_from_delayed_trains} pax
-              </span>
-            </div>
-            <div className="flex justify-between border-b border-[#142618] pb-1.5">
-              <span className="text-gray-500">Active Delayed Trains:</span>
-              <span className="font-semibold text-white">{contributing_factors.delayed_trains_count}</span>
-            </div>
-
-            {contributing_factors.delayed_train_numbers && contributing_factors.delayed_train_numbers.length > 0 && (
-              <div className="py-1">
-                <span className="text-gray-500 block mb-1">Contributing Trains:</span>
-                <div className="flex flex-wrap gap-1">
-                  {contributing_factors.delayed_train_numbers.map((tnum) => (
-                    <span key={tnum} className="bg-[#1C3B24] text-white text-[10px] font-semibold px-1.5 py-0.5 rounded border border-[#2D5E3B]">
-                      T-{tnum}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <div className="pt-2 border-t border-[#1C3B24] mt-2">
-              <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold block mb-1">Formula Execution:</span>
-              <div className="bg-[#050906] p-2 rounded border border-[#142618] font-mono text-[10px] text-[#4ADE80] break-words">
-                score = min(100, (({contributing_factors.typical_load} + {contributing_factors.expected_passengers_from_delayed_trains}) / {contributing_factors.platform_capacity}) * 100)<br />
-                score = min(100, ({contributing_factors.typical_load + contributing_factors.expected_passengers_from_delayed_trains} / {contributing_factors.platform_capacity}) * 100) = <span className="font-bold text-white">{score}%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
