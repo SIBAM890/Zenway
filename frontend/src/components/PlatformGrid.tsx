@@ -1,101 +1,122 @@
-import type { CrowdRiskAssessment, Platform } from '../types/surge';
-import { LayoutGrid, Layers } from 'lucide-react';
-
-interface PlatformGridProps {
-  platforms: Platform[];
-  assessments: CrowdRiskAssessment[];
+interface PlatformData {
+  number: number;
+  occupancyPercent: number;
 }
 
-export function PlatformGrid({ platforms, assessments }: PlatformGridProps) {
+interface PlatformGridProps {
+  platforms: PlatformData[];
+}
+
+export function PlatformGrid({ platforms }: PlatformGridProps) {
+  const getColor = (percent: number) => {
+    if (percent >= 70) return '#ef4444'; // Modern Red
+    if (percent >= 45) return '#f59e0b'; // Modern Amber
+    return '#10b981'; // Modern Green
+  };
+
+  const getBgColor = (percent: number) => {
+    if (percent >= 70) return '#fee2e2';
+    if (percent >= 45) return '#fef3c7';
+    return '#d1fae5';
+  };
+
   return (
-    <div className="bg-[#0D160F] border border-[#1A3320] rounded-xl p-5 shadow-lg">
-      <div className="flex items-center justify-between border-b border-[#1C3B24] pb-3 mb-4">
-        <h3 className="text-base font-bold text-white flex items-center gap-2">
-          <LayoutGrid className="w-4 h-4 text-[#4ADE80]" />
-          Platform Occupancy Grid
-        </h3>
-        <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Physical Layout</span>
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', fontFamily: 'Inter, sans-serif' }}>
+      {/* Section Label */}
+      <div style={{
+        fontSize: '11px',
+        fontWeight: 700,
+        color: '#64748b',
+        textTransform: 'uppercase',
+        letterSpacing: '0.08em',
+        marginBottom: '8px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '4px'
+      }}>
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 6v6l4 2" />
+        </svg>
+        Platform load status
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {platforms.map((platform) => {
-          // Find matching assessment
-          const assessment = assessments.find((a) => a.platform_id === platform.id);
-          const level = assessment ? assessment.level : 'Normal';
+      {/* Outer Wrapper */}
+      <div style={{
+        backgroundColor: '#ffffff',
+        borderRadius: '16px',
+        border: '1px solid #e2e8f0',
+        overflow: 'hidden',
+        boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.05)'
+      }}>
+        {/* Grid Inside */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          gap: '1px',
+          backgroundColor: '#e2e8f0'
+        }}>
+          {platforms.map((platform) => {
+            const platformColor = platform.occupancyPercent >= 70 
+              ? '#dc2626' 
+              : platform.occupancyPercent >= 45 
+                ? '#d97706' 
+                : '#8e8e93';
+            return (
+              <div
+                key={platform.number}
+                style={{
+                  backgroundColor: '#ffffff',
+                  padding: '14px 8px',
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'background-color 0.2s ease'
+                }}
+                onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#f8fafc')}
+                onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#ffffff')}
+              >
+                {/* Platform Number */}
+                <div style={{
+                  fontSize: '22px',
+                  fontWeight: 600,
+                  color: platformColor,
+                  marginBottom: '2px'
+                }}>
+                  {platform.number}
+                </div>
 
-          // Get occupancy numbers
-          const capacity = platform.max_capacity;
-          const expectedPax = assessment?.contributing_factors.expected_passengers_from_delayed_trains || 0;
-          const baseLoad = assessment?.contributing_factors.typical_load || platform.typical_load_offpeak;
-          const currentLoad = baseLoad + expectedPax;
-          const percent = Math.min(100, (currentLoad / capacity) * 100);
+                {/* Percentage Text */}
+                <div style={{
+                  fontSize: '11px',
+                  color: '#8e8e93',
+                  marginTop: '1px'
+                }}>
+                  {platform.occupancyPercent}%
+                </div>
 
-          // Get border and text colors
-          const getColors = () => {
-            switch (level) {
-              case 'Critical':
-                return {
-                  border: 'border-red-900/40 bg-red-950/10',
-                  bar: 'bg-red-500',
-                  text: 'text-red-400',
-                };
-              case 'Elevated':
-                return {
-                  border: 'border-amber-900/40 bg-amber-950/10',
-                  bar: 'bg-amber-500',
-                  text: 'text-amber-400',
-                };
-              default:
-                return {
-                  border: 'border-[#1A3320] bg-emerald-950/5',
-                  bar: 'bg-emerald-500',
-                  text: 'text-emerald-400',
-                };
-            }
-          };
-
-          const colors = getColors();
-
-          return (
-            <div 
-              key={platform.id}
-              className={`border rounded-lg p-4 transition-all hover:bg-[#122316]/20 ${colors.border}`}
-            >
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold text-gray-300 flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-gray-500" />
-                  {platform.name}
-                </span>
-                <span className={`text-[10px] font-bold ${colors.text}`}>
-                  {level.toUpperCase()}
-                </span>
+                {/* Progress Bar */}
+                <div style={{
+                  height: '4px',
+                  width: '100%',
+                  backgroundColor: '#f1f5f9',
+                  borderRadius: '2px',
+                  marginTop: '8px',
+                  overflow: 'hidden'
+                }}>
+                  <div style={{
+                    width: `${Math.min(100, Math.max(0, platform.occupancyPercent))}%`,
+                    height: '100%',
+                    backgroundColor: platformColor,
+                    borderRadius: '2px'
+                  }} />
+                </div>
               </div>
-
-              <div className="flex items-end justify-between mb-1.5">
-                <span className="text-lg font-extrabold text-white">
-                  {currentLoad.toLocaleString()}{' '}
-                  <span className="text-xs font-normal text-gray-500">/ {capacity.toLocaleString()} pax</span>
-                </span>
-                <span className="text-xs font-semibold text-gray-400">
-                  {Math.round(percent)}%
-                </span>
-              </div>
-
-              {/* Progress bar */}
-              <div className="w-full bg-[#122216] h-2 rounded-full overflow-hidden">
-                <div 
-                  className={`h-full rounded-full transition-all duration-1000 ${colors.bar}`}
-                  style={{ width: `${percent}%` }}
-                ></div>
-              </div>
-
-              <div className="flex justify-between items-center mt-2.5 text-[9px] text-gray-500">
-                <span>Base: {baseLoad} pax</span>
-                <span>Expected Influx: +{expectedPax}</span>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
