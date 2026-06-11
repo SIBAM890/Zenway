@@ -1,0 +1,165 @@
+{
+  "scenario": "elevated",
+  "timeline": [
+    {
+      "elapsed_seconds": 0,
+      "trains": [
+        {
+          "id": "T12003",
+          "number": "12003",
+          "name": "NDLS Swarna Shatabdi",
+          "scheduled_arrival": "10:15",
+          "current_delay_mins": 10,
+          "avg_passengers": 650,
+          "class_breakdown": { "CC": 500, "EC": 150 }
+        },
+        {
+          "id": "T12424",
+          "number": "12424",
+          "name": "NDLS Dibrugarh Rajdhani",
+          "scheduled_arrival": "10:30",
+          "current_delay_mins": 5,
+          "avg_passengers": 950,
+          "class_breakdown": { "1A": 50, "2A": 200, "3A": 700 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 35.0,
+          "level": "Normal",
+          "time_to_critical": null,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 200,
+            "delayed_trains_count": 1,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 20,
+      "trains": [
+        {
+          "id": "T12003",
+          "number": "12003",
+          "name": "NDLS Swarna Shatabdi",
+          "scheduled_arrival": "10:15",
+          "current_delay_mins": 20,
+          "avg_passengers": 650,
+          "class_breakdown": { "CC": 500, "EC": 150 }
+        },
+        {
+          "id": "T12424",
+          "number": "12424",
+          "name": "NDLS Dibrugarh Rajdhani",
+          "scheduled_arrival": "10:30",
+          "current_delay_mins": 15,
+          "avg_passengers": 950,
+          "class_breakdown": { "1A": 50, "2A": 200, "3A": 700 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 48.0,
+          "level": "Normal",
+          "time_to_critical": null,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 460,
+            "delayed_trains_count": 1,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:00:20Z"
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 40,
+      "trains": [
+        {
+          "id": "T12003",
+          "number": "12003",
+          "name": "NDLS Swarna Shatabdi",
+          "scheduled_arrival": "10:15",
+          "current_delay_mins": 30,
+          "avg_passengers": 650,
+          "class_breakdown": { "CC": 500, "EC": 150 }
+        },
+        {
+          "id": "T12424",
+          "number": "12424",
+          "name": "NDLS Dibrugarh Rajdhani",
+          "scheduled_arrival": "10:30",
+          "current_delay_mins": 30,
+          "avg_passengers": 950,
+          "class_breakdown": { "1A": 50, "2A": 200, "3A": 700 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 58.0,
+          "level": "Elevated",
+          "time_to_critical": null,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 650,
+            "delayed_trains_count": 1,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:00:40Z"
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 60,
+      "trains": [
+        {
+          "id": "T12003",
+          "number": "12003",
+          "name": "NDLS Swarna Shatabdi",
+          "scheduled_arrival": "10:15",
+          "current_delay_mins": 30,
+          "avg_passengers": 650,
+          "class_breakdown": { "CC": 500, "EC": 150 }
+        },
+        {
+          "id": "T12424",
+          "number": "12424",
+          "name": "NDLS Dibrugarh Rajdhani",
+          "scheduled_arrival": "10:30",
+          "current_delay_mins": 30,
+          "avg_passengers": 950,
+          "class_breakdown": { "1A": 50, "2A": 200, "3A": 700 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 58.0,
+          "level": "Elevated",
+          "time_to_critical": null,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 650,
+            "delayed_trains_count": 1,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:01:00Z"
+        }
+      ]
+    }
+  ]
+}

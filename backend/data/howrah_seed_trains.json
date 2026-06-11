@@ -1,0 +1,92 @@
+[
+  {
+    "id": "T12301",
+    "number": "12301",
+    "name": "Howrah Rajdhani Express",
+    "scheduled_arrival": "10:00",
+    "current_delay_mins": 0,
+    "avg_passengers": 950,
+    "class_breakdown": { "1A": 50, "2A": 150, "3A": 500, "SL": 250 }
+  },
+  {
+    "id": "T12809",
+    "number": "12809",
+    "name": "Howrah Mail",
+    "scheduled_arrival": "10:30",
+    "current_delay_mins": 15,
+    "avg_passengers": 1200,
+    "class_breakdown": { "1A": 30, "2A": 120, "3A": 450, "SL": 600 }
+  },
+  {
+    "id": "T12322",
+    "number": "12322",
+    "name": "Kolkata Mail",
+    "scheduled_arrival": "11:15",
+    "current_delay_mins": 45,
+    "avg_passengers": 1400,
+    "class_breakdown": { "1A": 20, "2A": 100, "3A": 380, "SL": 900 }
+  },
+  {
+    "id": "T13006",
+    "number": "13006",
+    "name": "Amritsar Mail",
+    "scheduled_arrival": "11:45",
+    "current_delay_mins": 0,
+    "avg_passengers": 1300,
+    "class_breakdown": { "2A": 80, "3A": 320, "SL": 900 }
+  },
+  {
+    "id": "T12859",
+    "number": "12859",
+    "name": "Gitanjali Express",
+    "scheduled_arrival": "12:30",
+    "current_delay_mins": 60,
+    "avg_passengers": 1500,
+    "class_breakdown": { "2A": 100, "3A": 400, "SL": 1000 }
+  },
+  {
+    "id": "T12002",
+    "number": "12002",
+    "name": "Shatabdi Express",
+    "scheduled_arrival": "13:10",
+    "current_delay_mins": 5,
+    "avg_passengers": 800,
+    "class_breakdown": { "CC": 600, "EC": 200 }
+  },
+  {
+    "id": "T12303",
+    "number": "12303",
+    "name": "Poorva Express",
+    "scheduled_arrival": "13:45",
+    "current_delay_mins": 90,
+    "avg_passengers": 1600,
+    "class_breakdown": { "1A": 24, "2A": 120, "3A": 456, "SL": 1000 }
+  },
+  {
+    "id": "T12833",
+    "number": "12833",
+    "name": "Howrah Ahmedabad Express",
+    "scheduled_arrival": "14:15",
+    "current_delay_mins": 0,
+    "avg_passengers": 1500,
+    "class_breakdown": { "2A": 80, "3A": 320, "SL": 1100 }
+  },
+  {
+    "id": "T12260",
+    "number": "12260",
+    "name": "Howrah Duronto Express",
+    "scheduled_arrival": "15:00",
+    "current_delay_mins": 10,
+    "avg_passengers": 1100,
+    "class_breakdown": { "1A": 40, "2A": 160, "3A": 600, "SL": 300 }
+  },
+  {
+    "id": "T12324",
+    "number": "12324",
+    "name": "New Delhi Howrah Express",
+    "scheduled_arrival": "15:30",
+    "current_delay_mins": 25,
+    "avg_passengers": 1450,
+    "class_breakdown": { "1A": 18, "2A": 108, "3A": 324, "SL": 1000 }
+  }
+]

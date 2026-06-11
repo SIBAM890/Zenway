@@ -1,0 +1,250 @@
+{
+  "scenario": "critical",
+  "timeline": [
+    {
+      "elapsed_seconds": 0,
+      "trains": [
+        {
+          "id": "T12397",
+          "number": "12397",
+          "name": "Purushottam Express",
+          "scheduled_arrival": "10:15",
+          "current_delay_mins": 15,
+          "avg_passengers": 1400,
+          "class_breakdown": { "2A": 100, "3A": 400, "SL": 900 }
+        },
+        {
+          "id": "T12562",
+          "number": "12562",
+          "name": "Swatantrata Senani Express",
+          "scheduled_arrival": "10:25",
+          "current_delay_mins": 10,
+          "avg_passengers": 1500,
+          "class_breakdown": { "2A": 80, "3A": 320, "SL": 1100 }
+        },
+        {
+          "id": "T12394",
+          "number": "12394",
+          "name": "Sampoorna Kranti Express",
+          "scheduled_arrival": "10:40",
+          "current_delay_mins": 5,
+          "avg_passengers": 1600,
+          "class_breakdown": { "1A": 20, "2A": 100, "3A": 380, "SL": 1100 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 45.0,
+          "level": "Normal",
+          "time_to_critical": 30,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 400,
+            "delayed_trains_count": 1,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 15,
+      "trains": [
+        {
+          "id": "T12397",
+          "number": "12397",
+          "name": "Purushottam Express",
+          "scheduled_arrival": "10:15",
+          "current_delay_mins": 30,
+          "avg_passengers": 1400,
+          "class_breakdown": { "2A": 100, "3A": 400, "SL": 900 }
+        },
+        {
+          "id": "T12562",
+          "number": "12562",
+          "name": "Swatantrata Senani Express",
+          "scheduled_arrival": "10:25",
+          "current_delay_mins": 25,
+          "avg_passengers": 1500,
+          "class_breakdown": { "2A": 80, "3A": 320, "SL": 1100 }
+        },
+        {
+          "id": "T12394",
+          "number": "12394",
+          "name": "Sampoorna Kranti Express",
+          "scheduled_arrival": "10:40",
+          "current_delay_mins": 15,
+          "avg_passengers": 1600,
+          "class_breakdown": { "1A": 20, "2A": 100, "3A": 380, "SL": 1100 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 68.0,
+          "level": "Elevated",
+          "time_to_critical": 15,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 860,
+            "delayed_trains_count": 2,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:00:15Z"
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 30,
+      "trains": [
+        {
+          "id": "T12397",
+          "number": "12397",
+          "name": "Purushottam Express",
+          "scheduled_arrival": "10:15",
+          "current_delay_mins": 45,
+          "avg_passengers": 1400,
+          "class_breakdown": { "2A": 100, "3A": 400, "SL": 900 }
+        },
+        {
+          "id": "T12562",
+          "number": "12562",
+          "name": "Swatantrata Senani Express",
+          "scheduled_arrival": "10:25",
+          "current_delay_mins": 40,
+          "avg_passengers": 1500,
+          "class_breakdown": { "2A": 80, "3A": 320, "SL": 1100 }
+        },
+        {
+          "id": "T12394",
+          "number": "12394",
+          "name": "Sampoorna Kranti Express",
+          "scheduled_arrival": "10:40",
+          "current_delay_mins": 30,
+          "avg_passengers": 1600,
+          "class_breakdown": { "1A": 20, "2A": 100, "3A": 380, "SL": 1100 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 91.0,
+          "level": "Critical",
+          "time_to_critical": 0,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 1320,
+            "delayed_trains_count": 3,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:00:30Z"
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 45,
+      "trains": [
+        {
+          "id": "T12397",
+          "number": "12397",
+          "name": "Purushottam Express",
+          "scheduled_arrival": "10:15",
+          "current_delay_mins": 45,
+          "avg_passengers": 1400,
+          "class_breakdown": { "2A": 100, "3A": 400, "SL": 900 }
+        },
+        {
+          "id": "T12562",
+          "number": "12562",
+          "name": "Swatantrata Senani Express",
+          "scheduled_arrival": "10:25",
+          "current_delay_mins": 40,
+          "avg_passengers": 1500,
+          "class_breakdown": { "2A": 80, "3A": 320, "SL": 1100 }
+        },
+        {
+          "id": "T12394",
+          "number": "12394",
+          "name": "Sampoorna Kranti Express",
+          "scheduled_arrival": "10:40",
+          "current_delay_mins": 30,
+          "avg_passengers": 1600,
+          "class_breakdown": { "1A": 20, "2A": 100, "3A": 380, "SL": 1100 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 91.0,
+          "level": "Critical",
+          "time_to_critical": 0,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 1320,
+            "delayed_trains_count": 3,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:00:45Z"
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 60,
+      "trains": [
+        {
+          "id": "T12397",
+          "number": "12397",
+          "name": "Purushottam Express",
+          "scheduled_arrival": "10:15",
+          "current_delay_mins": 45,
+          "avg_passengers": 1400,
+          "class_breakdown": { "2A": 100, "3A": 400, "SL": 900 }
+        },
+        {
+          "id": "T12562",
+          "number": "12562",
+          "name": "Swatantrata Senani Express",
+          "scheduled_arrival": "10:25",
+          "current_delay_mins": 40,
+          "avg_passengers": 1500,
+          "class_breakdown": { "2A": 80, "3A": 320, "SL": 1100 }
+        },
+        {
+          "id": "T12394",
+          "number": "12394",
+          "name": "Sampoorna Kranti Express",
+          "scheduled_arrival": "10:40",
+          "current_delay_mins": 30,
+          "avg_passengers": 1600,
+          "class_breakdown": { "1A": 20, "2A": 100, "3A": 380, "SL": 1100 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 91.0,
+          "level": "Critical",
+          "time_to_critical": 0,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 1320,
+            "delayed_trains_count": 3,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:01:00Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+RISK_NORMAL_MAX = 50
+RISK_ELEVATED_MAX = 75
+RISK_CRITICAL_MIN = 76
+
+# Risk level names
+LEVEL_NORMAL = "Normal"
+LEVEL_ELEVATED = "Elevated"
+LEVEL_CRITICAL = "Critical"

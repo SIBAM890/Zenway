@@ -1,0 +1,46 @@
+{
+  "critical": {
+    "NDLS": {
+      "P1": {
+        "action_card": {
+          "summary": "Critical crowd surge threat on Platform 1: Compounding delays of three high-capacity trains (Purushottam, Swatantrata Senani, Sampoorna Kranti Expresses) converging within 30 minutes. Estimated influx: 1,320 passengers, exceeding platform capacity by 320.",
+          "actions": [
+            "De-congest Platform 1 by halting non-passenger access at entry gates.",
+            "Reroute incoming passenger footfalls to Platform 2 and 3 using overhead footbridges.",
+            "Deploy RPF (Railway Protection Force) personnel at Platform 1 stairs and escalators.",
+            "Coordinate with train control to hold delayed trains at outer signals if necessary.",
+            "Initiate multilingual PA emergency announcements immediately."
+          ],
+          "time_window": "10:15 - 10:45",
+          "confidence": 0.95
+        },
+        "announcements": [
+          {
+            "language": "English",
+            "text": "Attention passengers, Platform 1 is heavily crowded due to delayed train arrivals. For your safety, please use the foot overbridges to move to Platform 2 or 3. Kindly cooperate with the security personnel."
+          },
+          {
+            "language": "Hindi",
+            "text": "यात्रीगण कृपया ध्यान दें, ट्रेनों के विलंब के कारण प्लेटफॉर्म संख्या 1 पर भारी भीड़ है। आपकी सुरक्षा के लिए, कृपया फुट ओवरब्रिज का उपयोग करें और प्लेटफॉर्म संख्या 2 या 3 पर जाएं। सुरक्षा कर्मियों का सहयोग करें।"
+          },
+          {
+            "language": "Tamil",
+            "text": "பயணிகளின் கவனத்திற்கு, ரயில்கள் தாமதம் காரணமாக 1வது பிளாட்பாரத்தில் கூட்டம் அதிகமாக உள்ளது. உங்கள் பாதுகாப்பிற்காக, தயவுசெய்து மேம்பாலங்களைப் பயன்படுத்தி பிளாட்பாரம் 2 அல்லது 3க்குச் செல்லவும். பாதுகாப்புப் பணியாளர்களுக்கு ஒத்துழைப்பு வழங்கவும்."
+          },
+          {
+            "language": "Telugu",
+            "text": "ప్రయాణీకుల సమాచారం కొరకు, రైళ్లు ఆలస్యం కావడం వల్ల ప్లాట్‌ఫారమ్ 1 పై విపరీతమైన రద్దీ ఉంది. మీ భద్రత కొరకు, దయచేసి ఫుట్ ఓవర్ బ్రిడ్జిలను ఉపయోగించి ప్లాట్‌ఫారమ్ 2 లేదా 3 కి వెళ్ళండి. భద్రతా సిబ్బందికి సహకరించండి."
+          },
+          {
+            "language": "Odia",
+            "text": "ଯାତ୍ରୀମାନଙ୍କ ଦୃଷ୍ଟିଆକର୍ଷଣ, ଟ୍ରେନ୍ ବିଳମ୍ବ ଯୋଗୁଁ ପ୍ଲାଟଫର୍ମ ୧ ରେ ପ୍ରବଳ ଭିଡ଼ ଅଛି। ଆପଣଙ୍କ ସୁରକ୍ଷା ପାଇଁ, ଦୟାକରି ଫୁଟ୍ ଓଭରବ୍ରିଜ୍ ବ୍ୟବହାର କରି ପ୍ଲାଟଫର୍ମ ୨ କିମ୍ବା ୩ କୁ ଯାଆନ୍ତୁ। ସୁରକ୍ଷା କର୍ମୀଙ୍କୁ ସହଯୋଗ କରନ୍ତୁ।"
+          },
+          {
+            "language": "Bengali",
+            "text": "যাত্রীদের দৃষ্টি আকর্ষণ করা হচ্ছে, ট্রেন বিলম্বের কারণে ১ নম্বর প্ল্যাটফর্মে অতিরিক্ত ভিড় রয়েছে। আপনার সুরক্ষার জন্য, দয়া করে ফুট ওভারব্রিজ ব্যবহার করে ২ বা ৩ নম্বর প্ল্যাটফর্মে চলে যান। নিরাপত্তা কর্মীদের সহযোগিতা করুন।"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "HWH",
+    "name": "Howrah Junction",
+    "code": "HWH",
+    "platforms": [
+      { "id": "P1", "name": "Platform 1", "max_capacity": 800, "typical_load_peak": 600, "typical_load_offpeak": 200 },
+      { "id": "P2", "name": "Platform 2", "max_capacity": 1200, "typical_load_peak": 900, "typical_load_offpeak": 300 },
+      { "id": "P3", "name": "Platform 3", "max_capacity": 1000, "typical_load_peak": 750, "typical_load_offpeak": 250 },
+      { "id": "P4", "name": "Platform 4", "max_capacity": 800, "typical_load_peak": 600, "typical_load_offpeak": 200 },
+      { "id": "P5", "name": "Platform 5", "max_capacity": 1500, "typical_load_peak": 1100, "typical_load_offpeak": 400 }
+    ]
+  },
+  {
+    "id": "NDLS",
+    "name": "New Delhi Railway Station",
+    "code": "NDLS",
+    "platforms": [
+      { "id": "P1", "name": "Platform 1", "max_capacity": 2000, "typical_load_peak": 1500, "typical_load_offpeak": 500 },
+      { "id": "P2", "name": "Platform 2", "max_capacity": 1800, "typical_load_peak": 1300, "typical_load_offpeak": 450 },
+      { "id": "P3", "name": "Platform 3", "max_capacity": 1800, "typical_load_peak": 1300, "typical_load_offpeak": 450 },
+      { "id": "P4", "name": "Platform 4", "max_capacity": 1500, "typical_load_peak": 1100, "typical_load_offpeak": 400 },
+      { "id": "P5", "name": "Platform 5", "max_capacity": 1500, "typical_load_peak": 1100, "typical_load_offpeak": 400 }
+    ]
+  },
+  {
+    "id": "CSMT",
+    "name": "Chhatrapati Shivaji Maharaj Terminus",
+    "code": "CSMT",
+    "platforms": [
+      { "id": "P1", "name": "Platform 1", "max_capacity": 1000, "typical_load_peak": 700, "typical_load_offpeak": 250 },
+      { "id": "P2", "name": "Platform 2", "max_capacity": 1200, "typical_load_peak": 900, "typical_load_offpeak": 300 },
+      { "id": "P3", "name": "Platform 3", "max_capacity": 1200, "typical_load_peak": 900, "typical_load_offpeak": 300 },
+      { "id": "P4", "name": "Platform 4", "max_capacity": 1500, "typical_load_peak": 1100, "typical_load_offpeak": 400 }
+    ]
+  }
+]

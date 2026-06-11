@@ -1,0 +1,115 @@
+{
+  "scenario": "normal",
+  "timeline": [
+    {
+      "elapsed_seconds": 0,
+      "trains": [
+        {
+          "id": "T12301",
+          "number": "12301",
+          "name": "Howrah Rajdhani Express",
+          "scheduled_arrival": "10:00",
+          "current_delay_mins": 0,
+          "avg_passengers": 950,
+          "class_breakdown": { "1A": 50, "2A": 150, "3A": 500, "SL": 250 }
+        },
+        {
+          "id": "T12809",
+          "number": "12809",
+          "name": "Howrah Mail",
+          "scheduled_arrival": "10:30",
+          "current_delay_mins": 0,
+          "avg_passengers": 1200,
+          "class_breakdown": { "1A": 30, "2A": 120, "3A": 450, "SL": 600 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 25.0,
+          "level": "Normal",
+          "time_to_critical": null,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 0,
+            "delayed_trains_count": 0,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:00:00Z"
+        },
+        {
+          "station_id": "NDLS",
+          "platform_id": "P2",
+          "score": 25.0,
+          "level": "Normal",
+          "time_to_critical": null,
+          "contributing_factors": {
+            "platform_capacity": 1800,
+            "typical_load": 450,
+            "expected_passengers_from_delayed_trains": 0,
+            "delayed_trains_count": 0,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "elapsed_seconds": 60,
+      "trains": [
+        {
+          "id": "T12301",
+          "number": "12301",
+          "name": "Howrah Rajdhani Express",
+          "scheduled_arrival": "10:00",
+          "current_delay_mins": 0,
+          "avg_passengers": 950,
+          "class_breakdown": { "1A": 50, "2A": 150, "3A": 500, "SL": 250 }
+        },
+        {
+          "id": "T12809",
+          "number": "12809",
+          "name": "Howrah Mail",
+          "scheduled_arrival": "10:30",
+          "current_delay_mins": 0,
+          "avg_passengers": 1200,
+          "class_breakdown": { "1A": 30, "2A": 120, "3A": 450, "SL": 600 }
+        }
+      ],
+      "assessments": [
+        {
+          "station_id": "NDLS",
+          "platform_id": "P1",
+          "score": 25.0,
+          "level": "Normal",
+          "time_to_critical": null,
+          "contributing_factors": {
+            "platform_capacity": 2000,
+            "typical_load": 500,
+            "expected_passengers_from_delayed_trains": 0,
+            "delayed_trains_count": 0,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:01:00Z"
+        },
+        {
+          "station_id": "NDLS",
+          "platform_id": "P2",
+          "score": 25.0,
+          "level": "Normal",
+          "time_to_critical": null,
+          "contributing_factors": {
+            "platform_capacity": 1800,
+            "typical_load": 450,
+            "expected_passengers_from_delayed_trains": 0,
+            "delayed_trains_count": 0,
+            "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+          },
+          "calculated_at": "2026-06-11T10:01:00Z"
+        }
+      ]
+    }
+  ]
+}
