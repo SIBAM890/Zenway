@@ -1,9 +1,11 @@
 import asyncio
 import logging
+import pytest
 from backend.agent import run_alert_agent
 
 logging.basicConfig(level=logging.INFO)
 
+@pytest.mark.asyncio
 async def test():
     mock_assessment = {
         "station_id": "NDLS",

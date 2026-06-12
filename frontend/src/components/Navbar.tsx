@@ -6,6 +6,9 @@ interface NavbarProps {
   onStationChange: (station: string) => void;
   stationTabs: { name: string; code: string }[];
   onSelectStation: (station: { name: string; code: string }) => void;
+  isDemo?: boolean;
+  scenario?: string;
+  elapsedSeconds?: number;
 }
 
 export function Navbar({
@@ -13,6 +16,9 @@ export function Navbar({
   onStationChange,
   stationTabs,
   onSelectStation,
+  isDemo,
+  scenario,
+  elapsedSeconds,
 }: NavbarProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<{ name: string; code: string }[]>([]);
@@ -102,6 +108,23 @@ export function Navbar({
           alignItems: 'center',
           gap: '6px'
         }}>
+          {isDemo && (
+            <div style={{
+              backgroundColor: '#f59e0b',
+              color: '#ffffff',
+              borderRadius: '6px',
+              fontSize: '11px',
+              fontWeight: 700,
+              padding: '4px 10px',
+              marginRight: '8px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em'
+            }}>
+              JUDGE DEMO MODE — Scenario: {scenario} ({elapsedSeconds}s)
+            </div>
+          )}
           <span className="live-indicator" style={{
             width: '6px',
             height: '6px',

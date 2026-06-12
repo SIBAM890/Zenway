@@ -38,25 +38,8 @@ export const api = {
       console.warn("Backend fetch failed, using fallback data for station:", station, e);
     }
 
-    // Fallback for custom searched stations
-    const nameMap: Record<string, string> = {
-      NDLS: "New Delhi Railway Station",
-      HWH: "Howrah Junction",
-      CSMT: "Chhatrapati Shivaji Maharaj Terminus",
-      CSTM: "Chhatrapati Shivaji Maharaj Terminus",
-      MAS: "Chennai Central",
-      SC: "Secunderabad Junction",
-      SBC: "KSR Bengaluru City",
-      ADI: "Ahmedabad Junction",
-      PUNE: "Pune Junction",
-      PNBE: "Patna Junction",
-      GHY: "Guwahati Junction",
-      CNB: "Kanpur Central",
-      LKO: "Lucknow Charbagh"
-    };
     const sUpper = station.toUpperCase();
-    const stationName = nameMap[sUpper] || `Station ${sUpper}`;
-
+ 
     return [
       {
         station_id: sUpper,
@@ -66,11 +49,12 @@ export const api = {
         time_to_critical: 12,
         calculated_at: new Date().toISOString(),
         contributing_factors: {
-          passenger_density: 0.78,
-          delayed_train_count: 2,
+          platform_capacity: 2000,
+          typical_load: 1250,
           expected_passengers_from_delayed_trains: 750,
-          weather_delay_factor: 0.1,
-          peak_hour_multiplier: 1.2
+          delayed_trains_count: 2,
+          delayed_train_numbers: ['12626'],
+          formula: "750 expected passengers from 2 delayed trains"
         }
       },
       {
@@ -81,11 +65,12 @@ export const api = {
         time_to_critical: null,
         calculated_at: new Date().toISOString(),
         contributing_factors: {
-          passenger_density: 0.42,
-          delayed_train_count: 0,
+          platform_capacity: 1800,
+          typical_load: 684,
           expected_passengers_from_delayed_trains: 0,
-          weather_delay_factor: 0.0,
-          peak_hour_multiplier: 1.0
+          delayed_trains_count: 0,
+          delayed_train_numbers: [],
+          formula: "All clear, normal base load"
         }
       }
     ];
@@ -121,18 +106,22 @@ export const api = {
     const sUpper = station.toUpperCase();
     return [
       {
-        train_number: '12626',
-        train_name: `${sUpper} Express`,
+        id: '12626',
+        number: '12626',
+        name: `${sUpper} Express`,
         scheduled_arrival: '14:20',
-        estimated_arrival: '14:35',
-        delay_minutes: 15
+        current_delay_mins: 15,
+        avg_passengers: 750,
+        class_breakdown: {}
       },
       {
-        train_number: '12002',
-        train_name: `Shatabdi Exp`,
+        id: '12002',
+        number: '12002',
+        name: `Shatabdi Exp`,
         scheduled_arrival: '15:00',
-        estimated_arrival: '15:00',
-        delay_minutes: 0
+        current_delay_mins: 0,
+        avg_passengers: 600,
+        class_breakdown: {}
       }
     ];
   },

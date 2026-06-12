@@ -6,6 +6,10 @@ import { Navbar } from '../components/Navbar';
 import { PlatformGrid } from '../components/PlatformGrid';
 import { TrainFeed } from '../components/TrainFeed';
 import { AlertCard } from '../components/AlertCard';
+import { RiskGauge } from '../components/RiskGauge';
+import { PAPanel } from '../components/PAPanel';
+import { AuditLog } from '../components/AuditLog';
+import { Play, Pause, RotateCcw, X, Sliders } from 'lucide-react';
 
 export function Dashboard() {
   const [station, setStation] = useState('NDLS');
@@ -27,17 +31,17 @@ export function Dashboard() {
 
   const alerts = useAlerts({ station });
 
-  const handleReset = () => {
-    demo.resetDemo(station);
-    alerts.refetchHistory();
+  const handleReset = async () => {
+    await demo.resetDemo(station);
+    await alerts.refetchHistory();
     alerts.clearLocalAlert();
     refetch();
   };
 
-  const handleStationChange = (code: string) => {
+  const handleStationChange = async (code: string) => {
     setStation(code);
     if (demo.isDemo) {
-      demo.resetDemo(code);
+      await demo.resetDemo(code);
       alerts.clearLocalAlert();
     }
   };
@@ -121,6 +125,9 @@ export function Dashboard() {
         }}
         stationTabs={stationTabs}
         onSelectStation={handleSelectStation}
+        isDemo={demo.isDemo}
+        scenario={demo.scenario}
+        elapsedSeconds={demo.elapsedSeconds}
       />
 
 
@@ -133,215 +140,311 @@ export function Dashboard() {
         boxSizing: 'border-box'
       }}>
         <div className="dashboard-grid">
-        {/* Top Banner */}
-        <div className="dashboard-full-width" style={{
-          backgroundColor: '#ffffff',
-          borderRadius: '16px',
-          border: '1px solid #e2e8f0',
-          borderLeft: '5px solid #dc2626',
-          padding: '16px 20px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          width: '100%',
-          boxSizing: 'border-box',
-          boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.05)'
-        }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-            <span style={{
-              fontSize: '12px',
-              fontWeight: 700,
-              color: '#dc2626',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px'
-            }}>
-              <span className="live-indicator" style={{
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                backgroundColor: '#dc2626',
-                display: 'inline-block'
-              }} />
-              18 fatalities at New Delhi station · February 2025
-            </span>
-            <span style={{
-              fontSize: '13px',
-              color: '#64748b',
-              marginTop: '4px',
-              fontWeight: 500
-            }}>
-              StationSense detects crowd surges before they happen.
-            </span>
-          </div>
-          <button
-            onClick={() => {
-              if (!demo.isDemo) {
-                demo.selectScenario('critical');
-              } else {
-                if (!demo.isPlaying) {
-                  demo.togglePlayback();
-                }
-              }
-            }}
-            style={{
-              backgroundColor: '#2563eb',
-              color: '#ffffff',
-              border: 'none',
-              borderRadius: '8px',
-              fontSize: '12px',
-              fontWeight: 700,
-              padding: '8px 18px',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-              transition: 'all 0.2s',
-              boxShadow: '0 2px 4px rgba(37, 99, 235, 0.2)'
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#1d4ed8')}
-            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#2563eb')}
-          >
-            Run Demo
-          </button>
-        </div>
-
-        {/* 1. Simple Hero Banner */}
-        {assessment && (
+        {/* Demo Control Panel */}
+        {demo.isDemo && (
           <div className="dashboard-full-width" style={{
+            backgroundColor: '#ffffff',
             borderRadius: '16px',
-            padding: '20px 24px',
-            background: riskLevel === 'critical' 
-              ? 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)' 
-              : riskLevel === 'elevated' 
-                ? 'linear-gradient(135deg, #92400e 0%, #d97706 100%)' 
-                : 'linear-gradient(135deg, #065f46 0%, #10b981 100%)',
-            display: 'grid',
-            gridTemplateColumns: '1fr auto',
-            gap: '16px',
+            border: '1px solid #e2e8f0',
+            padding: '16px 20px',
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
             alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '16px',
             width: '100%',
             boxSizing: 'border-box',
-            fontFamily: 'Inter, sans-serif',
-            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05)',
-            position: 'relative',
-            overflow: 'hidden'
+            boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.05)'
           }}>
-            {/* Subtle background SVG illustration */}
-            <svg
-              style={{
-                position: 'absolute',
-                right: 0,
-                bottom: 0,
-                opacity: 0.08,
-                pointerEvents: 'none',
-                height: '100%',
-                overflow: 'hidden'
-              }}
-              viewBox="0 0 300 120"
-              fill="none"
-              stroke="#ffffff"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              {/* Train tracks/platform line */}
-              <line x1="0" y1="100" x2="300" y2="100" />
-              <line x1="0" y1="108" x2="300" y2="108" />
-              
-              {/* Train outline */}
-              <path d="M 0 30 L 120 30 C 135 30, 145 40, 145 55 L 145 100 L 0 100 Z" />
-              <rect x="15" y="45" width="20" height="20" rx="3" />
-              <rect x="45" y="45" width="20" height="20" rx="3" />
-              <rect x="75" y="45" width="20" height="20" rx="3" />
-              <rect x="105" y="45" width="20" height="20" rx="3" />
-              
-              {/* Platform pillar */}
-              <line x1="200" y1="30" x2="200" y2="100" />
-              <line x1="200" y1="30" x2="280" y2="30" />
-              
-              {/* Stick figures (people) */}
-              {/* Person 1 */}
-              <circle cx="170" cy="70" r="5" />
-              <line x1="170" y1="75" x2="170" y2="90" />
-              <line x1="165" y1="80" x2="175" y2="80" />
-              <line x1="170" y1="90" x2="167" y2="100" />
-              <line x1="170" y1="90" x2="173" y2="100" />
-              
-              {/* Person 2 */}
-              <circle cx="220" cy="65" r="5" />
-              <line x1="220" y1="70" x2="220" y2="85" />
-              <line x1="215" y1="75" x2="225" y2="75" />
-              <line x1="220" y1="85" x2="217" y2="98" />
-              <line x1="220" y1="85" x2="223" y2="98" />
-              
-              {/* Person 3 */}
-              <circle cx="250" cy="72" r="5" />
-              <line x1="250" y1="77" x2="250" y2="92" />
-              <line x1="245" y1="82" x2="255" y2="82" />
-              <line x1="250" y1="92" x2="247" y2="100" />
-              <line x1="250" y1="92" x2="253" y2="100" />
-            </svg>
+            {/* Left Side: Play/Pause/Reset Controls */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <button
+                onClick={demo.togglePlayback}
+                style={{
+                  backgroundColor: '#2563eb',
+                  color: '#ffffff',
+                  border: 'none',
+                  borderRadius: '8px',
+                  padding: '8px 14px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  transition: 'all 0.2s'
+                }}
+              >
+                {demo.isPlaying ? (
+                  <>
+                    <Pause size={14} fill="currentColor" />
+                    <span>Pause</span>
+                  </>
+                ) : (
+                  <>
+                    <Play size={14} fill="currentColor" />
+                    <span>Play</span>
+                  </>
+                )}
+              </button>
 
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', position: 'relative', zIndex: 2 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+              <button
+                onClick={handleReset}
+                style={{
+                  backgroundColor: '#f1f5f9',
+                  color: '#475569',
+                  border: 'none',
+                  borderRadius: '8px',
+                  padding: '8px 12px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  fontSize: '12px',
+                  fontWeight: 600,
+                  transition: 'background-color 0.2s'
+                }}
+                title="Reset Demo"
+              >
+                <RotateCcw size={14} />
+                <span>Reset</span>
+              </button>
+            </div>
+
+            {/* Middle: Scrubber */}
+            <div style={{
+              flex: '1 1 300px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              backgroundColor: '#f8fafc',
+              border: '1px solid #e2e8f0',
+              padding: '8px 16px',
+              borderRadius: '10px'
+            }}>
+              <span style={{
+                fontSize: '10px',
+                fontWeight: 700,
+                color: '#dc2626',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px',
+                whiteSpace: 'nowrap'
+              }}>
                 <span className="live-indicator" style={{
                   width: '6px',
                   height: '6px',
                   borderRadius: '50%',
-                  backgroundColor: '#22c55e',
+                  backgroundColor: '#dc2626',
                   display: 'inline-block'
-                }}></span>
-                <span style={{
-                  fontSize: '10px',
-                  color: 'rgba(255, 255, 255, 0.8)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  fontWeight: 700
-                }}>
-                  Surge risk status
-                </span>
-              </div>
-              <h2 style={{
-                fontSize: '32px',
-                fontWeight: 700,
-                color: '#fff',
-                letterSpacing: '-0.02em',
-                lineHeight: '1.1',
-                margin: 0
-              }}>
-                {riskLevel.charAt(0).toUpperCase() + riskLevel.slice(1)}
-              </h2>
-              <p style={{
+                }} />
+                Demo Clock
+              </span>
+
+              <input
+                type="range"
+                min="0"
+                max="60"
+                value={demo.elapsedSeconds}
+                onChange={(e) => demo.setTime(Number(e.target.value))}
+                style={{
+                  flex: 1,
+                  height: '4px',
+                  cursor: 'pointer',
+                  accentColor: '#2563eb'
+                }}
+              />
+
+              <span style={{
+                fontFamily: 'monospace',
                 fontSize: '12px',
-                color: 'rgba(255, 255, 255, 0.85)',
-                marginTop: '8px',
-                lineHeight: '1.5',
-                margin: 0,
-                fontWeight: 500
+                color: '#475569',
+                fontWeight: 600,
+                minWidth: '95px',
+                textAlign: 'right'
               }}>
-                {description}
-              </p>
+                {demo.elapsedSeconds}s <span style={{ color: '#94a3b8' }}>/</span> 60s
+              </span>
             </div>
-            <div style={{
-              fontSize: '14px',
-              fontWeight: 700,
-              color: '#ffffff',
-              backgroundColor: 'rgba(255, 255, 255, 0.15)',
-              padding: '8px 14px',
-              borderRadius: '20px',
-              textAlign: 'right',
-              backdropFilter: 'blur(4px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              position: 'relative',
-              zIndex: 2
-            }}>
-              {etaMinutes !== null ? `Surge in ~${etaMinutes} min` : "No surge expected"}
+
+            {/* Right Side: Scenario Select & Exit */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div style={{
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
+                backgroundColor: '#ffffff',
+                border: '1px solid #e2e8f0',
+                borderRadius: '8px',
+                padding: '4px 8px'
+              }}>
+                <Sliders size={14} className="text-slate-500 mr-2" />
+                <select
+                  value={demo.scenario}
+                  onChange={(e) => demo.selectScenario(e.target.value, station)}
+                  style={{
+                    border: 'none',
+                    backgroundColor: 'transparent',
+                    color: '#0f172a',
+                    fontSize: '12px',
+                    fontWeight: 600,
+                    outline: 'none',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <option value="critical">Critical Scenario</option>
+                  <option value="elevated">Elevated Scenario</option>
+                  <option value="normal">Normal Scenario</option>
+                </select>
+              </div>
+
+              <button
+                onClick={demo.disableDemo}
+                style={{
+                  backgroundColor: '#fef2f2',
+                  color: '#dc2626',
+                  border: '1px solid #fee2e2',
+                  borderRadius: '8px',
+                  padding: '8px 12px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  transition: 'all 0.2s'
+                }}
+              >
+                <X size={14} />
+                <span>Exit Demo</span>
+              </button>
             </div>
           </div>
         )}
 
-        {/* Left Column (Core Telemetry) */}
+        {/* Top Banner (Visible when not in Demo Mode) */}
+        {!demo.isDemo && (
+          <div className="dashboard-full-width" style={{
+            backgroundColor: '#ffffff',
+            borderRadius: '16px',
+            border: '1px solid #e2e8f0',
+            borderLeft: '5px solid #dc2626',
+            padding: '16px 20px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '100%',
+            boxSizing: 'border-box',
+            boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.05)'
+          }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+              <span style={{
+                fontSize: '12px',
+                fontWeight: 700,
+                color: '#dc2626',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px'
+              }}>
+                <span className="live-indicator" style={{
+                  width: '6px',
+                  height: '6px',
+                  borderRadius: '50%',
+                  backgroundColor: '#dc2626',
+                  display: 'inline-block'
+                }} />
+                18 fatalities at New Delhi station · February 2025
+              </span>
+              <span style={{
+                fontSize: '13px',
+                color: '#64748b',
+                marginTop: '4px',
+                fontWeight: 500
+              }}>
+                StationSense detects crowd surges before they happen.
+              </span>
+            </div>
+            <button
+              onClick={() => {
+                demo.selectScenario('critical', station);
+              }}
+              style={{
+                backgroundColor: '#2563eb',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '8px',
+                fontSize: '12px',
+                fontWeight: 700,
+                padding: '8px 18px',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                transition: 'all 0.2s',
+                boxShadow: '0 2px 4px rgba(37, 99, 235, 0.2)'
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#1d4ed8')}
+              onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#2563eb')}
+            >
+              Run Demo
+            </button>
+          </div>
+        )}
+
+        {/* Left Column (Core Telemetry - wider) */}
         <div className="dashboard-column">
-          {/* 2. Two stat cards side by side */}
+          {/* Risk Gauge Banner */}
+          {assessment && (
+            <RiskGauge
+              score={score}
+              riskLevel={riskLevel}
+              description={description}
+              etaMinutes={etaMinutes}
+            />
+          )}
+
+          {/* Platform load occupancy meters */}
+          <PlatformGrid platforms={mappedPlatforms} />
+
+          {/* Sensor Grid Section */}
+          <div style={{ display: 'flex', flexDirection: 'column', width: '100%', fontFamily: 'Inter, sans-serif' }}>
+            <div style={{
+              fontSize: '11px',
+              fontWeight: 700,
+              color: '#64748b',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              marginBottom: '8px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px'
+            }}>
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M9 3v18M15 3v18M3 9h18M3 15h18" />
+              </svg>
+              Sensor Grid Status
+            </div>
+            
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: '12px',
+              width: '100%'
+            }}>
+              {assessments.slice(0, 2).map((a) => (
+                <RiskGauge
+                  key={a.platform_id}
+                  variant="circular"
+                  assessment={a}
+                  platformName={a.platform_id === 'P1' ? 'Platform 1 (Main)' : `Platform ${a.platform_id.substring(1)}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Stat Cards Side by Side */}
           <div style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
@@ -391,14 +494,11 @@ export function Dashboard() {
               </span>
             </div>
           </div>
-
-          {/* 4. TrainFeed */}
-          <TrainFeed trains={mappedTrains} />
         </div>
 
-        {/* Right Column (Diagnostics & Bulletins) */}
+        {/* Right Column (Diagnostics & Bulletins - narrower) */}
         <div className="dashboard-column">
-          {/* 5. AlertCard */}
+          {/* Active Mitigation Card / AlertCard Area */}
           {alerts.activeAlert ? (
             <AlertCard
               alertText={alerts.activeAlert.action_card?.summary || "Immediate crowd mitigation protocols generated. Select action below."}
@@ -411,19 +511,35 @@ export function Dashboard() {
               borderRadius: '16px',
               border: '1px dashed #cbd5e1',
               backgroundColor: '#ffffff',
-              padding: '28px 16px',
+              padding: '24px 20px',
               textAlign: 'center',
               color: '#64748b',
               fontSize: '12px',
               fontWeight: 500,
               boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.05)'
             }}>
-              No active security or surge alerts. System operations normal.
+              <h4 style={{ color: '#0f172a', fontWeight: 700, marginBottom: '4px' }}>No Active Surge Alerts</h4>
+              <p style={{ color: '#64748b', fontSize: '11px' }}>
+                {demo.isDemo && demo.scenario === 'critical' && demo.elapsedSeconds < 30
+                  ? `Critical threat building... Run timeline to 30 seconds to trigger warning.`
+                  : `Surge prediction algorithm is monitoring platform loads. Operations normal.`}
+              </p>
             </div>
           )}
 
-          {/* 3. PlatformGrid */}
-          <PlatformGrid platforms={mappedPlatforms} />
+          {/* PA Announcement Tab Console */}
+          <PAPanel
+            announcements={alerts.activeAlert?.announcements}
+            alertStatus={alerts.activeAlert?.status || 'none'}
+          />
+
+          {/* Real-time system logs */}
+          <AuditLog logs={alerts.auditLog} />
+        </div>
+
+        {/* BELOW (full width) */}
+        <div className="dashboard-full-width">
+          <TrainFeed trains={mappedTrains} />
         </div>
       </div>
     </div>

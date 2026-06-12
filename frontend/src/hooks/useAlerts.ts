@@ -12,11 +12,51 @@ export function useAlerts({ station }: UseAlertsProps) {
   const [auditLog, setAuditLog] = useState<AuditLogEntry[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch initial audit log history
+  // Fetch initial audit log history and reconstruct any pending alerts
   const fetchHistory = async () => {
     try {
       const logs = await api.fetchAuditHistory(station);
       setAuditLog(logs);
+      
+      // Find the most recent critical assessment log for the active station
+      const criticalLog = logs.find(
+        (l) => l.event_type === 'SURGE_RISK_CRITICAL' && 
+        l.station_id.toUpperCase() === station.toUpperCase()
+      );
+      
+      if (criticalLog) {
+        // Check if there is a more recent confirmation or broadcast event
+        const isResolved = logs.some(
+          (l) => 
+            (l.event_type === 'ALERT_CONFIRMED' || l.event_type === 'ALERT_BROADCASTED') && 
+            l.timestamp > criticalLog.timestamp
+        );
+        
+        if (!isResolved) {
+          // Locate corresponding action card and PA announcement logs
+          const actionCardLog = logs.find(
+            (l) => l.event_type === 'ACTION_CARD_GENERATED' && l.timestamp >= criticalLog.timestamp
+          );
+          const paLog = logs.find(
+            (l) => l.event_type === 'PA_ANNOUNCEMENT_CREATED' && l.timestamp >= criticalLog.timestamp
+          );
+          
+          const alertId = actionCardLog?.data?.alert_id || paLog?.data?.alert_id || 'A-TEMP';
+          
+          setActiveAlert({
+            id: alertId,
+            risk_assessment_id: `${criticalLog.station_id}-${criticalLog.platform_id || 'P1'}`,
+            status: 'pending',
+            created_at: criticalLog.timestamp,
+            action_card: actionCardLog?.data?.action_card,
+            announcements: paLog?.data?.announcements
+          });
+        } else {
+          setActiveAlert(null);
+        }
+      } else {
+        setActiveAlert(null);
+      }
     } catch (e) {
       console.error('Failed to fetch event history:', e);
     } finally {
@@ -67,20 +107,32 @@ export function useAlerts({ station }: UseAlertsProps) {
           const actionCardData = payload.data.action_card;
           const alertId = payload.data.alert_id;
           setActiveAlert((prev) => {
-            if (prev && (prev.id === alertId || prev.id === 'A-TEMP')) {
+            if (prev) {
               return { ...prev, id: alertId, action_card: actionCardData };
             }
-            return prev;
+            return {
+              id: alertId,
+              risk_assessment_id: `${payload.data.station_id || station}-${payload.data.platform_id || 'P1'}`,
+              status: 'pending',
+              created_at: new Date().toISOString(),
+              action_card: actionCardData
+            };
           });
         } 
         else if (payload.event_type === 'PA_ANNOUNCEMENT_CREATED') {
           const announcementsData = payload.data.announcements;
           const alertId = payload.data.alert_id;
           setActiveAlert((prev) => {
-            if (prev && (prev.id === alertId || prev.id === 'A-TEMP')) {
+            if (prev) {
               return { ...prev, id: alertId, announcements: announcementsData };
             }
-            return prev;
+            return {
+              id: alertId,
+              risk_assessment_id: `${payload.data.station_id || station}-${payload.data.platform_id || 'P1'}`,
+              status: 'pending',
+              created_at: new Date().toISOString(),
+              announcements: announcementsData
+            };
           });
         }
         else if (payload.event_type === 'ALERT_CONFIRMED' || payload.event_type === 'ALERT_BROADCASTED') {

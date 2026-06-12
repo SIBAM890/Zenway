@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const navigate = (path: string) => {
   window.history.pushState({}, '', path);

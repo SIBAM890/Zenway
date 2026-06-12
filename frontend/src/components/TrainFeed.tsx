@@ -46,21 +46,16 @@ export function TrainFeed({ trains }: TrainFeedProps) {
           let delayBg = '#d1fae5';
           let delayColor = '#065f46';
           let delayText = 'On Time';
-          let statusLabel = 'ON TIME';
           
           if (delay > 20) {
             delayBg = '#fee2e2';
             delayColor = '#b91c1c';
             delayText = `+${delay} min`;
-            statusLabel = 'DELAYED';
           } else if (delay >= 5) {
             delayBg = '#fef3c7';
             delayColor = '#b45309';
             delayText = `+${delay} min`;
-            statusLabel = 'DELAYED';
           }
-
-          const routeBadgeColor = delay > 20 ? '#ef4444' : delay >= 5 ? '#f59e0b' : '#3b82f6';
 
           return (
             <div
