@@ -77,29 +77,59 @@ export default function Landing() {
         </p>
 
         {/* CTA BUTTON */}
-        <button
-          onClick={handleLaunch}
-          style={{
-            marginTop: '28px',
-            backgroundColor: '#2563eb',
-            color: '#ffffff',
-            border: 'none',
-            borderRadius: '10px',
-            fontSize: '14px',
-            fontWeight: 600,
-            padding: '12px 28px',
-            cursor: 'pointer',
-            display: 'block',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            transition: 'background-color 0.2s',
-            boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)'
-          }}
-          onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#1d4ed8')}
-          onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#2563eb')}
-        >
-          Launch Dashboard →
-        </button>
+        <div style={{ display: 'flex', gap: '16px', marginTop: '32px' }}>
+          <button 
+            onClick={() => navigate('/dashboard')}
+            style={{
+              backgroundColor: '#1a1a1a',
+              color: '#ffffff',
+              border: 'none',
+              borderRadius: '12px',
+              padding: '16px 32px',
+              fontSize: '16px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              boxShadow: '0 4px 14px rgba(0, 0, 0, 0.1)',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 4px 14px rgba(0, 0, 0, 0.1)';
+            }}
+          >
+            Crowd AI Dashboard →
+          </button>
+          
+          <button 
+            onClick={() => navigate('/ops-dashboard')}
+            style={{
+              backgroundColor: '#4f46e5',
+              color: '#ffffff',
+              border: 'none',
+              borderRadius: '12px',
+              padding: '16px 32px',
+              fontSize: '16px',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              boxShadow: '0 4px 14px rgba(79, 70, 229, 0.3)',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(79, 70, 229, 0.4)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 4px 14px rgba(79, 70, 229, 0.3)';
+            }}
+          >
+            Ops Dashboard (Feature 2) →
+          </button>
+        </div>
 
         {/* THREE STAT PILLS */}
         <div style={{

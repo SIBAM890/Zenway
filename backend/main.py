@@ -22,6 +22,11 @@ from backend.services.alert_service import alert_service
 from backend.services.audit_service import audit_service
 from backend.apis.railway_api import railway_api_client
 
+# Feature 2 Integrations
+from backend.feature2.router_crew import router as crew_router
+from backend.feature2.router_fois import router as fois_router
+from backend.feature2.router_concierge import router as concierge_router
+
 # Setup logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("zenway.main")
@@ -40,6 +45,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Mount Feature 2 Routers
+app.include_router(crew_router, prefix="/api/v1/crew", tags=["Crew Intelligence"])
+app.include_router(fois_router, prefix="/api/v1/fois", tags=["FOIS Freight ETA"])
+app.include_router(concierge_router, prefix="/api/v1/concierge", tags=["Layover Concierge"])
 
 # SSE Connection Queues
 sse_queues = set()
