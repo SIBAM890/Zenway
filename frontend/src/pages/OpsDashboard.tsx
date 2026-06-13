@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
-import { LayoutDashboard, TrainTrack, Smartphone, Train, Activity, Map, Sun, Moon, Bell } from 'lucide-react';
+import { useState } from 'react';
+import { Smartphone, Train, Activity, Map, Sun, Moon, Bell } from 'lucide-react';
 import {
   CrewPulseDashboard,
   FoisEtaTracker,

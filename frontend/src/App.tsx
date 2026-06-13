@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import OpsDashboard from './pages/OpsDashboard';
+import { GlobalProvider } from './context/GlobalContext';
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -20,15 +21,16 @@ function App() {
     };
   }, []);
 
+  let content;
   if (currentPath === '/dashboard') {
-    return <Dashboard />;
-  }
-  
-  if (currentPath === '/ops-dashboard') {
-    return <OpsDashboard />;
+    content = <Dashboard />;
+  } else if (currentPath === '/ops-dashboard') {
+    content = <OpsDashboard />;
+  } else {
+    content = <Landing />;
   }
 
-  return <Landing />;
+  return <GlobalProvider>{content}</GlobalProvider>;
 }
 
 export default App;

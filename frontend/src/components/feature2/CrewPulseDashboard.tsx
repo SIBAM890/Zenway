@@ -13,7 +13,8 @@ import {
   Info
 } from 'lucide-react';
 import { fetchCrewAlerts, requestCrewSwap } from '../../services/api';
-import RosterSwapModal, { ReplacementPilotInfo } from './RosterSwapModal';
+import RosterSwapModal from './RosterSwapModal';
+import type { ReplacementPilotInfo } from './RosterSwapModal';
 
 import CrewGanttChart from './CrewGanttChart';
 

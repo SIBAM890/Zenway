@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -85,9 +84,10 @@ export default function InteractiveFoisMap({ rakes, terminals }: MapProps) {
           const coords = terminalCoords[terminal.name] || [20, 78]; // fallback
           // Color based on alert_level
           let color = '#3b82f6'; // blue default
-          if (terminal.alert_level === 'critical' || terminal.alert_level === 'red') color = '#ef4444'; // red
-          if (terminal.alert_level === 'elevated' || terminal.alert_level === 'yellow') color = '#f59e0b'; // amber
-          if (terminal.alert_level === 'normal' || terminal.alert_level === 'green') color = '#10b981'; // emerald
+          const level = terminal.alert_level as string;
+          if (level === 'critical' || level === 'red') color = '#ef4444'; // red
+          if (level === 'elevated' || level === 'yellow') color = '#f59e0b'; // amber
+          if (level === 'normal' || level === 'green') color = '#10b981'; // emerald
 
           return (
             <CircleMarker 

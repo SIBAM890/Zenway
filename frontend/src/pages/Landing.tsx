@@ -6,10 +6,6 @@ export const navigate = (path: string) => {
 };
 
 export default function Landing() {
-  const handleLaunch = () => {
-    navigate('/dashboard');
-  };
-
   return (
     <div style={{
       minHeight: '100vh',

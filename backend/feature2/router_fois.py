@@ -13,7 +13,7 @@ from fastapi import APIRouter, HTTPException, Query
 import httpx
 from pydantic import BaseModel, Field
 
-from .fois_eta_brain import FOISEtaPredictor, CongestionPredictor
+from .fois_eta_brain import ETAConfidenceModel, TerminalCongestionPredictor
 
 # ---------------------------------------------------------------------------
 # Pydantic schemas

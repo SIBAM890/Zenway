@@ -47,9 +47,9 @@ app.add_middleware(
 )
 
 # Mount Feature 2 Routers
-app.include_router(crew_router, prefix="/api/v1/crew", tags=["Crew Intelligence"])
-app.include_router(fois_router, prefix="/api/v1/fois", tags=["FOIS Freight ETA"])
-app.include_router(concierge_router, prefix="/api/v1/concierge", tags=["Layover Concierge"])
+app.include_router(crew_router)
+app.include_router(fois_router)
+app.include_router(concierge_router)
 
 # SSE Connection Queues
 sse_queues = set()

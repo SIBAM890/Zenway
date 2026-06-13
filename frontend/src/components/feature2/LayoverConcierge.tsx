@@ -1,13 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Train,
-  Navigation,
-  Utensils,
-  Camera,
-  Coffee,
-  AlertCircle,
   Search,
   ChevronDown,
   Loader2,
