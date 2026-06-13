@@ -12,12 +12,11 @@ from datetime import datetime
 from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, HTTPException, Query, Depends, BackgroundTasks
-from sqlalchemy.orm import Session
 from pydantic import BaseModel, Field
 
 from .agent_rescheduler import ReschedulingAgent
-from database import get_db
-import models
+import time
+import asyncio
 import time
 import asyncio
 
@@ -99,14 +98,9 @@ router = APIRouter(prefix="/api/v1/crew", tags=["Crew Intelligence"])
 _agent = ReschedulingAgent()
 
 @router.get("/fatigue/{pilot_id}", response_model=FatigueResponse)
-async def get_fatigue(pilot_id: str, db: Session = Depends(get_db)) -> FatigueResponse:
-    pilot = db.query(models.Pilot).filter(models.Pilot.pilot_id == pilot_id).first()
-    
-    if pilot:
-        score = pilot.fatigue_score
-    else:
-        h = int(hashlib.md5(pilot_id.encode()).hexdigest(), 16)
-        score = round(30 + (h % 60) + random.Random(h).uniform(-5, 5), 1)
+async def get_fatigue(pilot_id: str) -> FatigueResponse:
+    h = int(hashlib.md5(pilot_id.encode()).hexdigest(), 16)
+    score = round(30 + (h % 60) + random.Random(h).uniform(-5, 5), 1)
 
     return FatigueResponse(
         pilot_id=pilot_id,
@@ -139,21 +133,19 @@ async def predict_fatigue_endpoint(body: ShiftFeaturesRequest) -> PredictionResp
 
 @router.get("/roster/alerts", response_model=RosterAlertsResponse)
 async def get_roster_alerts(
-    threshold: int = Query(70, ge=0, le=100, description="Fatigue threshold"),
-    db: Session = Depends(get_db)
+    threshold: int = Query(70, ge=0, le=100, description="Fatigue threshold")
 ) -> RosterAlertsResponse:
-    pilots = db.query(models.Pilot).filter(models.Pilot.fatigue_score > threshold).all()
-    
+    # Generate 5 mock pilots with high fatigue
     alerts: List[FatigueAlert] = []
-    for p in pilots:
+    for i in range(5):
         alerts.append(
             FatigueAlert(
-                pilot_id=p.pilot_id,
-                name=p.name,
-                fatigue_score=p.fatigue_score,
-                home_station=p.home_station,
-                consecutive_days_on_duty=p.consecutive_days_on_duty,
-                risk_level=_risk_level(p.fatigue_score),
+                pilot_id=f"LP-{1000 + i}",
+                name=f"Mock Pilot {i}",
+                fatigue_score=round(75 + random.random() * 20, 1),
+                home_station="NDLS",
+                consecutive_days_on_duty=5 + i,
+                risk_level="CRITICAL"
             )
         )
     alerts.sort(key=lambda a: a.fatigue_score, reverse=True)
@@ -181,9 +173,7 @@ async def propose_swap(body: SwapRequest, bg_tasks: BackgroundTasks) -> SwapProp
     )
 
 @router.get("/health", response_model=HealthResponse)
-async def health_check(db: Session = Depends(get_db)) -> HealthResponse:
-    # Test DB connection
-    db.execute("SELECT 1")
+async def health_check() -> HealthResponse:
     return HealthResponse(
         status="healthy",
         service="crew-intelligence",

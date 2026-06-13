@@ -9,15 +9,11 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-from fastapi import APIRouter, HTTPException, Query, Depends
-from sqlalchemy.orm import Session
-from pydantic import BaseModel, Field
+from fastapi import APIRouter, HTTPException, Query
 import httpx
-import asyncio
+from pydantic import BaseModel, Field
 
-from .fois_eta_brain import ETAConfidenceModel, TerminalCongestionPredictor
-from database import get_db
-import models
+from .fois_eta_brain import FOISEtaPredictor, CongestionPredictor
 
 # ---------------------------------------------------------------------------
 # Pydantic schemas
@@ -108,11 +104,10 @@ async def fetch_external_weather_mock():
 async def get_eta(
     rake_id: str,
     origin: str = Query("Mundra", description="Origin terminal / station"),
-    destination: str = Query("New Delhi", description="Destination terminal / station"),
-    db: Session = Depends(get_db)
+    destination: str = Query("New Delhi", description="Destination terminal / station")
 ) -> ETAResponse:
     
-    rake = db.query(models.Rake).filter(models.Rake.rake_id == rake_id).first()
+    rake = None
     
     # Base prediction
     prediction = _eta_model.predict_eta(rake_id, origin, destination)
@@ -130,18 +125,18 @@ async def get_eta(
     return ETAResponse(**prediction)
 
 @router.get("/rakes", response_model=AllRakesResponse)
-async def get_all_rakes(db: Session = Depends(get_db)) -> AllRakesResponse:
-    db_rakes = db.query(models.Rake).all()
+async def get_all_rakes() -> AllRakesResponse:
+    db_rakes = []
     
     rakes = []
-    for r in db_rakes:
+    for i in range(5):
         rakes.append(
             RakeResponse(
-                rake_id=r.rake_id,
-                origin=r.origin,
-                destination=r.destination,
-                expected_arrival=r.expected_arrival,
-                status=r.status
+                rake_id=f"RAKE-{100 + i}",
+                origin="NDLS",
+                destination="BCT",
+                expected_arrival="2026-06-13T12:00:00Z",
+                status="EN_ROUTE"
             )
         )
         
@@ -168,8 +163,7 @@ async def batch_eta(body: BatchETARequest) -> BatchETAResponse:
 @router.get("/congestion/{terminal}", response_model=CongestionResponse)
 async def get_congestion(
     terminal: str,
-    window_hours: int = Query(4, ge=1, le=24),
-    db: Session = Depends(get_db)
+    window_hours: int = Query(4, ge=1, le=24)
 ) -> CongestionResponse:
     try:
         data = _congestion.get_congestion(terminal, window_hours=window_hours)
@@ -178,21 +172,19 @@ async def get_congestion(
     return CongestionResponse(**data)
 
 @router.get("/congestion", response_model=AllCongestionResponse)
-async def get_all_congestion(db: Session = Depends(get_db)) -> AllCongestionResponse:
-    db_terminals = db.query(models.Terminal).all()
-    
+async def get_all_congestion() -> AllCongestionResponse:
     terminals = []
-    for t in db_terminals:
-        # We blend DB data with the congestion predictor logic
-        utilization = min((t.current_rakes / t.capacity) * 100, 100) if t.capacity > 0 else 0
+    # Generate mock terminals
+    for i in range(3):
+        utilization = 80 + i * 5
         terminals.append(CongestionResponse(
-            terminal=t.terminal_id,
-            full_name=t.name,
+            terminal=f"T-{i}",
+            full_name=f"Mock Terminal {i}",
             state="Unknown",
-            current_rakes=t.current_rakes,
-            capacity=t.capacity,
+            current_rakes=10,
+            capacity=12,
             utilization_pct=utilization,
-            alert_level=t.alert_level,
+            alert_level="ELEVATED",
             predicted_clearance_hours=12.5,
             window_hours=4,
             snapshot_time=datetime.utcnow().isoformat() + "Z"
