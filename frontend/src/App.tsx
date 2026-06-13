@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
+import OpsDashboard from './pages/OpsDashboard';
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -21,6 +22,10 @@ function App() {
 
   if (currentPath === '/dashboard') {
     return <Dashboard />;
+  }
+  
+  if (currentPath === '/ops-dashboard') {
+    return <OpsDashboard />;
   }
 
   return <Landing />;
