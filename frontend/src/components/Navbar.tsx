@@ -1,14 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { api } from '../services/api';
+import { SXLogo } from './SXLogo';
 
 interface NavbarProps {
   activeStation: string;
   onStationChange: (station: string) => void;
   stationTabs: { name: string; code: string }[];
   onSelectStation: (station: { name: string; code: string }) => void;
-  isDemo?: boolean;
-  scenario?: string;
-  elapsedSeconds?: number;
 }
 
 export function Navbar({
@@ -16,9 +14,6 @@ export function Navbar({
   onStationChange,
   stationTabs,
   onSelectStation,
-  isDemo,
-  scenario,
-  elapsedSeconds,
 }: NavbarProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<{ name: string; code: string }[]>([]);
@@ -95,11 +90,7 @@ export function Navbar({
             cursor: 'pointer'
           }}
         >
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#2563eb" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="4" y="3" width="16" height="18" rx="2" />
-            <path d="M9 21h6M8 11h8M12 3v8" />
-          </svg>
-          <span>Station<span style={{ color: '#2563eb' }}>Sense</span></span>
+          <SXLogo size={34} withText />
         </div>
 
         {/* Right Side */}
@@ -108,23 +99,6 @@ export function Navbar({
           alignItems: 'center',
           gap: '6px'
         }}>
-          {isDemo && (
-            <div style={{
-              backgroundColor: '#f59e0b',
-              color: '#ffffff',
-              borderRadius: '6px',
-              fontSize: '11px',
-              fontWeight: 700,
-              padding: '4px 10px',
-              marginRight: '8px',
-              display: 'inline-flex',
-              alignItems: 'center',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em'
-            }}>
-              JUDGE DEMO MODE — Scenario: {scenario} ({elapsedSeconds}s)
-            </div>
-          )}
           <span className="live-indicator" style={{
             width: '6px',
             height: '6px',

@@ -4,6 +4,7 @@ interface TrainData {
   scheduledArrival: string;
   estimatedArrival: string;
   delayMinutes: number;
+  platformNumber?: number;
 }
 
 interface TrainFeedProps {
@@ -28,7 +29,7 @@ export function TrainFeed({ trains }: TrainFeedProps) {
         <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5">
           <path d="M4 22V2M20 22V2M2 5h20M2 19h20M2 12h20" />
         </svg>
-        Live departures & arrivals
+        Trains arriving soon
       </div>
 
       {/* Card Wrapper */}
@@ -46,16 +47,21 @@ export function TrainFeed({ trains }: TrainFeedProps) {
           let delayBg = '#d1fae5';
           let delayColor = '#065f46';
           let delayText = 'On Time';
+          let statusLabel = 'ON TIME';
           
           if (delay > 20) {
             delayBg = '#fee2e2';
             delayColor = '#b91c1c';
-            delayText = `+${delay} min`;
+            delayText = `${delay} min late`;
+            statusLabel = 'DELAYED';
           } else if (delay >= 5) {
             delayBg = '#fef3c7';
             delayColor = '#b45309';
-            delayText = `+${delay} min`;
+            delayText = `${delay} min late`;
+            statusLabel = 'DELAYED';
           }
+
+          const routeBadgeColor = delay > 20 ? '#ef4444' : delay >= 5 ? '#f59e0b' : '#3b82f6';
 
           return (
             <div
@@ -92,7 +98,10 @@ export function TrainFeed({ trains }: TrainFeedProps) {
                     color: '#64748b',
                     fontFamily: 'monospace'
                   }}>
-                    #{train.trainNumber}
+                  {train.platformNumber
+                    ? `heading to platform ${train.platformNumber}`
+                    : `#${train.trainNumber}`
+                  }
                   </span>
                 </div>
               </div>
@@ -113,7 +122,7 @@ export function TrainFeed({ trains }: TrainFeedProps) {
                   textAlign: 'right',
                   marginTop: '2px'
                 }}>
-                  sched {train.scheduledArrival}
+                  was due {train.scheduledArrival}
                 </span>
               </div>
 

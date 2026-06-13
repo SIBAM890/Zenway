@@ -26,3 +26,6 @@ dist-ssr/
 .vscode/
 .idea/
 *.log
+
+# Temp Redesigned UI
+redesigned frontend/

@@ -8,7 +8,17 @@ interface PlatformGridProps {
 }
 
 export function PlatformGrid({ platforms }: PlatformGridProps) {
+  const getColor = (percent: number) => {
+    if (percent >= 70) return '#ef4444'; // Modern Red
+    if (percent >= 45) return '#f59e0b'; // Modern Amber
+    return '#10b981'; // Modern Green
+  };
 
+  const getBgColor = (percent: number) => {
+    if (percent >= 70) return '#fee2e2';
+    if (percent >= 45) return '#fef3c7';
+    return '#d1fae5';
+  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', width: '100%', fontFamily: 'Inter, sans-serif' }}>

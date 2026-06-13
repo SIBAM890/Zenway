@@ -16,39 +16,19 @@ export function AuditLog({ logs }: AuditLogProps) {
     ? logs
     : logs.filter((log) => log.event_type === filterType);
 
-  const getEventBadgeStyle = (type: string) => {
+  const getEventBadgeClass = (type: string) => {
     switch (type) {
       case 'SURGE_RISK_CRITICAL':
-        return {
-          color: '#f87171',
-          backgroundColor: 'rgba(127, 29, 29, 0.3)',
-          borderColor: 'rgba(127, 29, 29, 0.5)'
-        };
+        return 'text-red-400 bg-red-950/30 border-red-900/50';
       case 'SURGE_RISK_UPDATED':
-        return {
-          color: '#fbbf24',
-          backgroundColor: 'rgba(120, 53, 4, 0.2)',
-          borderColor: 'rgba(120, 53, 4, 0.4)'
-        };
+        return 'text-amber-400 bg-amber-950/20 border-amber-900/40';
       case 'TRAIN_DELAY_DETECTED':
-        return {
-          color: '#60a5fa',
-          backgroundColor: 'rgba(30, 58, 138, 0.2)',
-          borderColor: 'rgba(30, 58, 138, 0.4)'
-        };
+        return 'text-blue-400 bg-blue-950/20 border-blue-900/40';
       case 'ALERT_CONFIRMED':
       case 'ALERT_BROADCASTED':
-        return {
-          color: '#34d399',
-          backgroundColor: 'rgba(6, 78, 59, 0.3)',
-          borderColor: 'rgba(6, 78, 59, 0.5)'
-        };
+        return 'text-emerald-400 bg-emerald-950/30 border-emerald-900/50';
       default:
-        return {
-          color: '#c084fc',
-          backgroundColor: 'rgba(88, 28, 135, 0.2)',
-          borderColor: 'rgba(88, 28, 135, 0.4)'
-        };
+        return 'text-purple-400 bg-purple-950/20 border-purple-900/40';
     }
   };
 
@@ -70,64 +50,22 @@ export function AuditLog({ logs }: AuditLogProps) {
   };
 
   return (
-    <div style={{
-      backgroundColor: '#0A0F0B',
-      border: '1px solid #1A3320',
-      borderRadius: '12px',
-      padding: '20px',
-      boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      height: '100%',
-      fontFamily: 'Inter, sans-serif',
-      boxSizing: 'border-box'
-    }}>
+    <div className="bg-[#0A0F0B] border border-[#1A3320] rounded-xl p-5 shadow-lg flex flex-col justify-between h-full">
       <div>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          borderBottom: '1px solid #1C3B24',
-          paddingBottom: '12px',
-          marginBottom: '16px'
-        }}>
-          <h3 style={{
-            fontSize: '15px',
-            fontWeight: 700,
-            color: '#ffffff',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            margin: 0
-          }}>
-            <Terminal size={16} style={{ color: '#4ADE80' }} />
+        <div className="flex items-center justify-between border-b border-[#1C3B24] pb-3 mb-4">
+          <h3 className="text-base font-bold text-white flex items-center gap-2">
+            <Terminal className="w-4 h-4 text-[#4ADE80]" />
             Audit Log & Alert History
           </h3>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            backgroundColor: '#0F2213',
-            border: '1px solid #1C3B24',
-            padding: '4px 8px',
-            borderRadius: '4px'
-          }}>
-            <Filter size={12} className="text-gray-500" />
+          <div className="flex items-center gap-2 bg-[#0F2213] border border-[#1C3B24] px-2 py-1 rounded">
+            <Filter className="w-3 h-3 text-gray-500" />
             <select
               value={filterType}
               onChange={(e) => setFilterType(e.target.value)}
-              style={{
-                background: 'transparent',
-                border: 'none',
-                color: '#cbd5e1',
-                fontSize: '12px',
-                outline: 'none',
-                cursor: 'pointer'
-              }}
+              className="bg-transparent text-gray-300 text-xs focus:outline-none cursor-pointer"
             >
               {eventTypes.map((type) => (
-                <option key={type} value={type} style={{ backgroundColor: '#08130B', color: '#e2e8f0' }}>
+                <option key={type} value={type} className="bg-[#08130B] text-gray-200">
                   {type.replace(/_/g, ' ')}
                 </option>
               ))}
@@ -136,22 +74,9 @@ export function AuditLog({ logs }: AuditLogProps) {
         </div>
 
         {/* Log feed console */}
-        <div style={{
-          backgroundColor: '#040805',
-          border: '1px solid #122316',
-          borderRadius: '8px',
-          padding: '12px',
-          height: '250px',
-          overflowY: 'auto',
-          fontFamily: 'monospace',
-          fontSize: '11px',
-          color: '#94a3b8',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '8px'
-        }}>
+        <div className="bg-[#040805] border border-[#122316] rounded-lg p-3 h-[250px] overflow-y-auto font-mono text-[11px] text-gray-400 space-y-2">
           {filteredLogs.length === 0 ? (
-            <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4b5563', textAlign: 'center', fontSize: '12px' }}>
+            <div className="h-full flex items-center justify-center text-gray-600 text-center text-xs">
               Waiting for system events...
             </div>
           ) : (
@@ -160,36 +85,17 @@ export function AuditLog({ logs }: AuditLogProps) {
               const timeStr = date.toLocaleTimeString();
 
               return (
-                <div key={log.id} style={{
-                  display: 'flex',
-                  alignItems: 'start',
-                  gap: '8px',
-                  padding: '6px 0',
-                  borderBottom: '1px solid rgba(28, 59, 36, 0.2)',
-                  transition: 'background-color 0.2s ease',
-                  textAlign: 'left'
-                }}>
-                  <span style={{ color: '#4b5563', userSelect: 'none', flexShrink: 0 }}>
+                <div key={log.id} className="flex items-start gap-2 py-1.5 hover:bg-[#122316]/20 transition-colors border-b border-[#112215]/20">
+                  <span className="text-gray-600 select-none flex-shrink-0">
                     [{timeStr}]
                   </span>
-                  <span style={{ color: '#94a3b8', fontWeight: 'bold', userSelect: 'none', flexShrink: 0 }}>
+                  <span className="text-gray-500 font-bold select-none flex-shrink-0">
                     {log.station_id}
                   </span>
-                  <span style={{
-                    flexShrink: 0,
-                    textTransform: 'uppercase',
-                    fontSize: '9px',
-                    fontWeight: 800,
-                    padding: '2px 6px',
-                    borderRadius: '4px',
-                    border: '1px solid',
-                    display: 'inline-block',
-                    lineHeight: '1.2',
-                    ...getEventBadgeStyle(log.event_type)
-                  }}>
+                  <span className={`px-1.5 py-0.5 rounded border text-[9px] font-extrabold select-none flex-shrink-0 ${getEventBadgeClass(log.event_type)}`}>
                     {log.event_type}
                   </span>
-                  <span style={{ color: '#cbd5e1', wordBreak: 'break-all', textAlign: 'left', flex: 1 }}>
+                  <span className="text-gray-200 break-all text-left">
                     {formatPayload(log.data)}
                   </span>
                 </div>
@@ -199,15 +105,8 @@ export function AuditLog({ logs }: AuditLogProps) {
         </div>
       </div>
 
-      <div style={{
-        marginTop: '12px',
-        fontSize: '10px',
-        color: '#64748b',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '4px'
-      }}>
-        <Calendar size={14} className="text-gray-600" />
+      <div className="mt-3 text-[10px] text-gray-500 flex items-center gap-1">
+        <Calendar className="w-3.5 h-3.5 text-gray-600" />
         <span>Append-only database journal • Total events logged: {logs.length}</span>
       </div>
     </div>

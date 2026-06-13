@@ -5,8 +5,9 @@ export function useDemoMode() {
   // Read parameters from URL query string
   const getQueryParams = () => {
     const params = new URLSearchParams(window.location.search);
+    const demoVal = params.get('demo');
     return {
-      isDemo: params.get('demo') === 'true',
+      isDemo: demoVal === 'true' || demoVal === 'feb15',
       scenario: params.get('scenario') || 'critical',
     };
   };
@@ -59,12 +60,7 @@ export function useDemoMode() {
     }
   };
 
-  const selectScenario = async (newScenario: string, stationCode?: string) => {
-    try {
-      await api.resetDemoScenario(newScenario, stationCode);
-    } catch (e) {
-      console.error('Failed to reset backend demo state on scenario switch:', e);
-    }
+  const selectScenario = (newScenario: string) => {
     const url = new URL(window.location.href);
     url.searchParams.set('demo', 'true');
     url.searchParams.set('scenario', newScenario);
