@@ -57774,5 +57774,5127 @@
         }
       ]
     }
+  },
+  {
+    "id": "LOG-23AECF",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:14.661199",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:14.660400",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C3AE67",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:14.885056",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:14.883849",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-132372",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:15.103548",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:14.883849",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C3FA81",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:15.291318",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:15.290338",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-BDE4E8",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:15.503330",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:15.290338",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-E76006",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:15.702991",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:15.702385",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-177B86",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:15.903033",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:15.702385",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DF9394",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:16.111317",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:16.110779",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-30A4B7",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:16.308125",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:16.110779",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-0BC67F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:16.505389",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:16.504960",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-4B06EF",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:16.685418",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:16.684796",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-69BF12",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:16.880021",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:16.684796",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-66C2E9",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:17.081873",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:17.081294",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-77E364",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:17.284685",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:17.081294",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-06BEC9",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:17.508788",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:17.508289",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-09FC6D",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:17.720800",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:17.508289",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-486116",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:17.931839",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:17.931223",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-419A2B",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:18.149370",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:17.931223",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-373B38",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:19.359782",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:19.358882",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-5B3D5F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:19.544443",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:19.543878",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-29E314",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:19.763400",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:19.543878",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C5315E",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:19.976278",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:19.975846",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-BA6BDB",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:20.184284",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:19.975846",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-D03AAE",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:20.404491",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:20.403907",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-BF32E5",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:20.584346",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:20.403907",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C1505B",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:20.779535",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:20.779029",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-F9B8DE",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:20.982744",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:20.779029",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-97847D",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:24.373603",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:24.372714",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C3EC8A",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:24.662800",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:24.662188",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-9C84EB",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:24.870630",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:24.662188",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C19466",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:25.087338",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:25.086762",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-2F8E6C",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:25.301819",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:25.086762",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-745A50",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:25.503328",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:25.502847",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-EEE4CB",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:25.723584",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:25.502847",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DB6883",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:25.935679",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:25.935151",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DF4479",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:26.125022",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:25.935151",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-5770BC",
+    "event_type": "TRAIN_DELAY_DETECTED",
+    "timestamp": "2026-06-13T21:28:28.129305",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "train_id": "T12397",
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "delay_mins": 15,
+      "detected_at": "2026-06-13T21:28:28.128324"
+    }
+  },
+  {
+    "id": "LOG-1F567B",
+    "event_type": "TRAIN_DELAY_DETECTED",
+    "timestamp": "2026-06-13T21:28:28.336382",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "train_id": "T12562",
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "delay_mins": 10,
+      "detected_at": "2026-06-13T21:28:28.335200"
+    }
+  },
+  {
+    "id": "LOG-B7A90C",
+    "event_type": "TRAIN_DELAY_DETECTED",
+    "timestamp": "2026-06-13T21:28:28.555462",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "train_id": "T12394",
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "delay_mins": 5,
+      "detected_at": "2026-06-13T21:28:28.554238"
+    }
+  },
+  {
+    "id": "LOG-96C55F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:28.788815",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:28.764876",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-3BA239",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:28.986262",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:28.985306",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-FC059A",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:29.173586",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:28.985306",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-321DA3",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:29.362842",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:29.362326",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8FA6AD",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:29.554142",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:29.362326",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-0E323F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:29.712575",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:29.711976",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-239335",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:29.927078",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:29.711976",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DF1BF5",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:30.108606",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:30.107102",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-7AF9AE",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:30.319231",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:30.107102",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-2889FF",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:30.541241",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:30.540779",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DE36D9",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:30.732190",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:30.731504",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B56DF2",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:30.971807",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:30.731504",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C86595",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:31.177046",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:31.176342",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-79D5DF",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:31.383054",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:31.176342",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-389FE5",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:31.590794",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:31.590369",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-671783",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:31.775821",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:31.590369",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-7A9BC2",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:28:31.977485",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:31.976756",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-0BE89C",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:28:32.201340",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:28:31.976756",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B8E49F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:26.814779",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:26.813525",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-1474BD",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:27.010346",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:27.009305",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-2F483C",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:27.187350",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:27.009305",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-9538C8",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:27.337544",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:27.335903",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-017068",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:27.539397",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:27.335903",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-3D71ED",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:27.703307",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:27.702665",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8171F4",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:27.907513",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:27.702665",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-F38414",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:28.077222",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:28.076665",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-55DE02",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:28.261807",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:28.076665",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-607FDE",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:28.456776",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:28.456371",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-F8A235",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:28.659337",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:28.658682",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-49753C",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:28.819142",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:28.658682",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-04A1AA",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:28.969519",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:28.968893",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-5EE757",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:29.236322",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:28.968893",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-0FD0C9",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:29.412495",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:29.411985",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-12295E",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:29.607508",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:29.411985",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-CB690E",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:29.818869",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:29.817972",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DD5382",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:30.018385",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:29.817972",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-351150",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:31.252469",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:31.251002",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-1B9410",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:31.501858",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:31.476141",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-CEEFF9",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:31.707698",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:31.476141",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-E91C0C",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:31.908617",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:31.907731",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-21D21E",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:32.103575",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:31.907731",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C832E7",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:32.315574",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:32.314979",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-7987B9",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:32.484129",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:32.314979",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-590582",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:32.640141",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:32.639586",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-828DB7",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:32.830031",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:32.639586",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8883F4",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:33.035948",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:33.035413",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-911E4F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:33.233580",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:33.233162",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8CA249",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:33.436871",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:33.233162",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-A78029",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:33.639998",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:33.639454",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-4F4A46",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:33.836468",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:33.639454",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-96F69C",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:34.001972",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:34.001298",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DFD251",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:34.206561",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:34.001298",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DF7957",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:34.395868",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:34.395399",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-769619",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:34.556895",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:34.395399",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8438CA",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:40.548271",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:40.547319",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-556402",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:40.742328",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:40.741940",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-D9D910",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:40.927164",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:40.741940",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-40339F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:41.143104",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:41.117468",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8D3B95",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:41.393050",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:41.117468",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-92CCF4",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:41.596477",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:41.595600",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-52A591",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:41.830244",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:41.595600",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-BC59F7",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:42.058090",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:41.805558",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-E80995",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:42.266026",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:42.259776",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-34DF9E",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:42.468023",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:42.260253",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-F95729",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:42.744533",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:42.265613",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-E0D405",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:42.923414",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:42.259776",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8E68D1",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:43.121442",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:42.260253",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-E33922",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:43.311070",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:42.902021",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-016A39",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:43.523897",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:43.522836",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-3B4933",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:43.722969",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:42.902021",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-85A823",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:43.954664",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:43.522836",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-31E45E",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:44.155997",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:43.953925",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-18B174",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:44.373935",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:44.373121",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C3E39A",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:44.562278",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:43.953925",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-809F19",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:44.720768",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:44.373121",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-42CE37",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:44.921308",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:44.719754",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B2E3BD",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:45.131080",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:45.130197",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-2C0062",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:45.329820",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:44.719754",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-3A37A9",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:45.528819",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:45.130197",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B52F1C",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:45.725043",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:45.527830",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C483BA",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:45.905802",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:45.527830",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-CAE218",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:46.127329",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:46.126994",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-375294",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:46.322215",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:46.321758",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-BD31BB",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:46.484635",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:46.321758",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-91DA19",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:46.642630",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:46.642074",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-1F798E",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:46.854259",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:46.642074",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-58AE2A",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:47.041524",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:47.040862",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-3A0573",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:47.234640",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:47.040862",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-1C67CC",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:47.438777",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:47.438173",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-A1C9B8",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:47.649607",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:47.438173",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8FF490",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:57.352307",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:57.351809",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B4CAB6",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:57.555845",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:57.555271",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-2B0C0D",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:57.747417",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:57.555271",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-50A2F8",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:57.977792",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:57.957560",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-E21E94",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:58.208403",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:57.957560",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-4B407F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:58.449175",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:58.448098",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-BF1967",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:58.668796",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:58.448098",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-47332B",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:58.921223",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:58.920558",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-FDC97F",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:59.094606",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:58.920558",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-802B1F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:59.284754",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:59.284347",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-FA8C2C",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:59.460099",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:59.459545",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-86140B",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:31:59.665971",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:59.459545",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-02E750",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:31:59.861443",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:59.860811",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-80B14C",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:00.059821",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:31:59.860811",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B2BA44",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:00.269004",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:00.268319",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DC408B",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:00.471533",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:00.268319",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-BE8A0F",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:00.665003",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:00.664397",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-CAA226",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:00.860411",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:00.664397",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-F4A102",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:02.358007",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:02.357332",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-CF52A2",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:02.536877",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:02.536191",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-A9D302",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:02.728582",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:02.536191",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-0D6AC1",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:02.930959",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:02.930410",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C868F6",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:03.175291",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:02.930410",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-4F2482",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:03.381086",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:03.380285",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8D8A26",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:03.604830",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:03.380285",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B13C0A",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:03.815946",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:03.815387",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-CD6A08",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:04.043190",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:03.815387",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-30088A",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:07.360590",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 75.0,
+      "level": "Elevated",
+      "time_to_critical": 15,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:07.359808",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-2D2C2E",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:07.551197",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:07.550356",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-8D51D7",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:07.757246",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:07.550356",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-5033F8",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:07.969299",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:07.968755",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-FC8668",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:08.180799",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 80.6,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:07.968755",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-9F3C14",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:08.395133",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:08.394449",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-F06B78",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:08.594528",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:08.394449",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-C50CAA",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:08.812640",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:08.812151",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-EF32B5",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:09.013829",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 93.3,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1000,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12002"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:08.812151",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-6CF49C",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:10.394393",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:10.393134",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B8444C",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:10.647469",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:10.643879",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-41865C",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:10.854029",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:10.643879",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-73696B",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:11.009850",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:11.009041",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-ACFE05",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:11.215546",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:11.009041",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-E7F6FB",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:11.535690",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:11.535239",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-43986F",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:11.733295",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:11.535239",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-2BE90D",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:11.951315",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:11.950781",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-68F70A",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:12.175683",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:11.950781",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-BA2B31",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:12.383581",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 45.0,
+      "level": "Normal",
+      "time_to_critical": 30,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 400,
+        "delayed_trains_count": 1,
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:12.383202",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B0FBD1",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:12.580245",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:12.579794",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DDBB65",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:12.768652",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:12.579794",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-978892",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:12.959469",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:12.958890",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-DDE65E",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:13.159057",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:12.958890",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-7A00E2",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:13.369325",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:13.368656",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-9949F0",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:13.566857",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:13.368656",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-E549CC",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T21:32:13.765863",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:13.765298",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-86961A",
+    "event_type": "SURGE_RISK_CRITICAL",
+    "timestamp": "2026-06-13T21:32:13.973703",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 100.0,
+      "level": "Critical",
+      "time_to_critical": 0,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 1400,
+        "delayed_trains_count": 1,
+        "delayed_train_numbers": [
+          "12397"
+        ],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T21:32:13.765298",
+      "demo": true,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-FA5030",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:46.156760",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 25.0,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:46.155733",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-0407D1",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:46.397711",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 25.0,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:46.396234",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B293EF",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:46.616427",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 25.0,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:46.614123",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-08B3A8",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:46.795456",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 26.7,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:46.777001",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-13EF55",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:47.000342",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 26.7,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:46.999313",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-090353",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:47.197960",
+    "station_id": "NDLS",
+    "platform_id": "P1",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P1",
+      "score": 25.0,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 2000,
+        "typical_load": 500,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:47.197507",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-E1A2AE",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:47.412495",
+    "station_id": "NDLS",
+    "platform_id": "P2",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P2",
+      "score": 25.0,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:47.411573",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-417BB6",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:47.637971",
+    "station_id": "NDLS",
+    "platform_id": "P3",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P3",
+      "score": 25.0,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 1800,
+        "typical_load": 450,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:47.636914",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-B63E9D",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:47.853630",
+    "station_id": "NDLS",
+    "platform_id": "P4",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P4",
+      "score": 26.7,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:47.853044",
+      "demo": false,
+      "scenario": "critical"
+    }
+  },
+  {
+    "id": "LOG-806231",
+    "event_type": "SURGE_RISK_UPDATED",
+    "timestamp": "2026-06-13T22:06:48.071921",
+    "station_id": "NDLS",
+    "platform_id": "P5",
+    "data": {
+      "station_id": "NDLS",
+      "platform_id": "P5",
+      "score": 26.7,
+      "level": "Normal",
+      "time_to_critical": null,
+      "contributing_factors": {
+        "platform_capacity": 1500,
+        "typical_load": 400,
+        "expected_passengers_from_delayed_trains": 0,
+        "delayed_trains_count": 0,
+        "delayed_train_numbers": [],
+        "formula": "min(100, ((typical_load + expected_passengers_from_delayed_trains) / platform_capacity) * 100)"
+      },
+      "calculated_at": "2026-06-13T22:06:48.071374",
+      "demo": false,
+      "scenario": "critical"
+    }
   }
 ]
