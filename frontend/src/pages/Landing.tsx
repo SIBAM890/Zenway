@@ -668,10 +668,10 @@ function CTA() {
             Ops Dashboard (Feature 2)
           </Link>
         </div>
-        <div className="mt-12 flex items-center justify-center gap-3 opacity-50">
-          <TrainSilhouette color="#fff" width={90} />
-          <TrainSilhouette color="#fff" width={90} delayed />
-          <TrainSilhouette color="#fff" width={90} />
+        <div className="mt-12 flex items-center justify-center gap-6 opacity-50">
+          <TrainSilhouette color="#fff" width={160} />
+          <TrainSilhouette color="#fff" width={160} delayed />
+          <TrainSilhouette color="#fff" width={160} />
         </div>
       </div>
     </section>
