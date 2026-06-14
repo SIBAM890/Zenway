@@ -112,7 +112,7 @@ function Header() {
           </Link>
           <Link
             to="/ops-dashboard"
-            className="inline-flex items-center justify-center rounded-lg px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-white/10"
+            className="inline-flex items-center justify-center rounded-full px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-white/10"
             style={{
               background: "rgba(255,255,255,0.08)",
               border: "1px solid rgba(255,255,255,0.15)",
@@ -234,7 +234,7 @@ function Hero() {
         <div className="mt-10 flex flex-wrap gap-3 justify-center" style={{ animation: "ss-fade-up 1.6s cubic-bezier(.2,.7,.2,1) both" }}>
           <Link
             to="/dashboard"
-            className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
             style={{ background: "#2563eb" }}
           >
             Open dashboard
@@ -242,14 +242,14 @@ function Hero() {
           <Link
             to="/dashboard"
             search={{ demo: "true", scenario: "critical" }}
-            className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-colors"
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors"
             style={{ background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.25)" }}
           >
             Run Feb 15 replay →
           </Link>
           <Link
             to="/ops-dashboard"
-            className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10"
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10"
             style={{ background: "rgba(255,255,255,0.08)", color: "#fff", border: "1px solid rgba(255,255,255,0.15)" }}
           >
             Ops Dashboard (Feature 2)
@@ -647,7 +647,7 @@ function CTA() {
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
           <Link
             to="/dashboard"
-            className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
             style={{ background: "#2563eb" }}
           >
             Open dashboard
@@ -655,14 +655,14 @@ function CTA() {
           <Link
             to="/dashboard"
             search={{ demo: "true", scenario: "critical" }}
-            className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-colors"
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors"
             style={{ background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.25)" }}
           >
             Run Feb 15 replay →
           </Link>
           <Link
             to="/ops-dashboard"
-            className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10"
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10"
             style={{ background: "rgba(255,255,255,0.08)", color: "#fff", border: "1px solid rgba(255,255,255,0.15)" }}
           >
             Ops Dashboard (Feature 2)

@@ -13,29 +13,6 @@ import { useGlobal } from '../context/GlobalContext';
 export default function ZenwayDashboard() {
   const [activeTab, setActiveTab] = useState<'crew' | 'fois' | 'concierge'>('crew');
   const { theme, toggleTheme, alerts } = useGlobal();
-  const [isTailwindLoaded, setIsTailwindLoaded] = useState(false);
-
-  useEffect(() => {
-    if (document.getElementById('tailwind-cdn')) {
-      setIsTailwindLoaded(true);
-      return;
-    }
-    const script = document.createElement('script');
-    script.id = 'tailwind-cdn';
-    script.src = 'https://cdn.tailwindcss.com';
-    script.onload = () => {
-      // Give Tailwind CDN a tiny bit of time to parse the DOM and inject styles
-      setTimeout(() => setIsTailwindLoaded(true), 50);
-    };
-    document.head.appendChild(script);
-  }, []);
-
-  if (!isTailwindLoaded) {
-    // Show a smooth blank background matching the theme to prevent FOUC
-    return (
-      <div style={{ position: 'fixed', inset: 0, zIndex: 100, backgroundColor: theme === 'dark' ? '#0f172a' : '#f8fafc' }} />
-    );
-  }
 
   return (
     <div className={`fixed inset-0 z-[100] overflow-auto font-sans transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-900 text-slate-100' : 'bg-[#f8fafc] text-slate-900'}`}>
