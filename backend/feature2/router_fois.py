@@ -175,16 +175,22 @@ async def get_congestion(
 async def get_all_congestion() -> AllCongestionResponse:
     terminals = []
     # Generate mock terminals
+    capacities = [12, 20, 15]
+    currents = [10, 8, 14]
+    alerts = ["ELEVATED", "NORMAL", "CRITICAL"]
+    
     for i in range(3):
-        utilization = 80 + i * 5
+        cap = capacities[i]
+        curr = currents[i]
+        util = (curr / cap) * 100
         terminals.append(CongestionResponse(
             terminal=f"T-{i}",
             full_name=f"Mock Terminal {i}",
             state="Unknown",
-            current_rakes=10,
-            capacity=12,
-            utilization_pct=utilization,
-            alert_level="ELEVATED",
+            current_rakes=curr,
+            capacity=cap,
+            utilization_pct=util,
+            alert_level=alerts[i],
             predicted_clearance_hours=12.5,
             window_hours=4,
             snapshot_time=datetime.utcnow().isoformat() + "Z"
