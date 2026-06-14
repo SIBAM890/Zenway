@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import OpsDashboard from './pages/OpsDashboard';
+import AppShell from './layouts/AppShell';
 import { GlobalProvider } from './context/GlobalContext';
 
 function App() {
@@ -23,9 +24,9 @@ function App() {
 
   let content;
   if (currentPath === '/dashboard') {
-    content = <Dashboard />;
+    content = <AppShell><Dashboard /></AppShell>;
   } else if (currentPath === '/ops-dashboard') {
-    content = <OpsDashboard />;
+    content = <AppShell><OpsDashboard /></AppShell>;
   } else {
     content = <Landing />;
   }
