@@ -17,8 +17,6 @@ from pydantic import BaseModel, Field
 from .agent_rescheduler import ReschedulingAgent
 import time
 import asyncio
-import time
-import asyncio
 
 # ---------------------------------------------------------------------------
 # Try to import the ML predictor; fall back to inline mock if model absent

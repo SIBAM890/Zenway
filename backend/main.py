@@ -40,7 +40,12 @@ app = FastAPI(
 # Enable CORS for frontend integration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For hackathon ease of deployment, allow all origins
+    # Explicit origins only — add the deployed Vercel frontend URL here once available.
+    # Example: "https://zenway-xxx.vercel.app"
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

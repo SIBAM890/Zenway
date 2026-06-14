@@ -1,51 +1,14 @@
+import { RISK_THEMES } from '../lib/themeConstants';
+import type { RiskLevel } from '../lib/themeConstants';
+
 interface RiskGaugeProps {
-  riskLevel: 'normal' | 'elevated' | 'critical';
+  riskLevel: RiskLevel;
   stationName: string;
   stationCode: string;
   description: string;
   etaMinutes: number | null;
   actionSteps?: string[];
 }
-
-/* ── Per-state design tokens ──────────────────────── */
-const THEMES = {
-  normal: {
-    bg:         '#f0fdf4',
-    border:     '#bbf7d0',
-    iconBg:     '#dcfce7',
-    iconColor:  '#15803d',
-    titleColor: '#15803d',
-    descColor:  '#166534',
-    etaColor:   '#15803d',
-    stepBg:     '#dcfce7',
-    stepNum:    '#15803d',
-    stepText:   '#166534',
-  },
-  elevated: {
-    bg:         '#fffbeb',
-    border:     '#fde68a',
-    iconBg:     '#fef9c3',
-    iconColor:  '#b45309',
-    titleColor: '#b45309',
-    descColor:  '#92400e',
-    etaColor:   '#b45309',
-    stepBg:     '#fef9c3',
-    stepNum:    '#b45309',
-    stepText:   '#92400e',
-  },
-  critical: {
-    bg:         '#fef2f2',
-    border:     '#fecaca',
-    iconBg:     '#fee2e2',
-    iconColor:  '#dc2626',
-    titleColor: '#dc2626',
-    descColor:  '#991b1b',
-    etaColor:   '#dc2626',
-    stepBg:     '#fee2e2',
-    stepNum:    '#dc2626',
-    stepText:   '#991b1b',
-  },
-} as const;
 
 const TITLES = {
   normal:   'Your station is safe right now',
@@ -124,7 +87,7 @@ export function RiskGauge({
   etaMinutes,
   actionSteps = [],
 }: RiskGaugeProps) {
-  const t = THEMES[riskLevel] ?? THEMES.normal;
+  const t = RISK_THEMES[riskLevel] ?? RISK_THEMES.normal;
   const title = TITLES[riskLevel];
   const showSteps = actionSteps.length > 0 && riskLevel !== 'normal';
 

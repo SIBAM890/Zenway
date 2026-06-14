@@ -18,29 +18,41 @@ class EventBus:
             self._handlers[event_type].append(handler)
             logger.info(f"Registered handler {handler.__name__} for event {event_type}")
 
-    async def emit(self, event_type: str, payload: Dict[str, Any]):
-        """Emit an event to all registered handlers asynchronously."""
+    async def emit(self, event_type: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+        """Emit an event to all registered handlers asynchronously.
+        
+        Returns {"success": bool, "errors": list[str]} so callers can
+        optionally inspect whether any handler failed.
+        """
         logger.info(f"Emitting event: {event_type}")
+        errors: List[str] = []
+
         if event_type not in self._handlers:
-            return
+            return {"success": True, "errors": []}
 
         tasks = []
+        async_handlers = []
         for handler in self._handlers[event_type]:
             try:
                 if inspect.iscoroutinefunction(handler):
                     tasks.append(handler(payload))
+                    async_handlers.append(handler)
                 else:
-                    # Run synchronous handler in executor or call directly
                     handler(payload)
             except Exception as e:
-                logger.error(f"Error preparing handler {handler} for event {event_type}: {e}")
+                msg = f"Handler '{handler.__name__}' failed preparing for event '{event_type}': {e}"
+                logger.error(msg)
+                errors.append(msg)
 
         if tasks:
-            # Gather tasks and handle exceptions gracefully
             results = await asyncio.gather(*tasks, return_exceptions=True)
-            for handler, res in zip(self._handlers[event_type], results):
+            for handler, res in zip(async_handlers, results):
                 if isinstance(res, Exception):
-                    logger.error(f"Error executing handler {handler} for event {event_type}: {res}")
+                    msg = f"Handler '{handler.__name__}' raised during event '{event_type}': {res}"
+                    logger.error(msg)
+                    errors.append(msg)
+
+        return {"success": len(errors) == 0, "errors": errors}
 
 # Global instance of EventBus
 event_bus = EventBus()

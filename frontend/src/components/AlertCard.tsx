@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import { RISK_THEMES } from '../lib/themeConstants';
+import type { RiskLevel } from '../lib/themeConstants';
+
 interface AlertCardProps {
   alertText: string;
   riskLevel: string;
@@ -5,40 +9,27 @@ interface AlertCardProps {
   onBroadcast: () => void;
 }
 
-const THEMES = {
-  critical: {
-    border:    '#fecaca',
-    leftBorder:'#dc2626',
-    accentColor:'#dc2626',
-    headerColor:'#dc2626',
-    btnBg:     '#dc2626',
-    iconStroke:'#dc2626',
-  },
-  elevated: {
-    border:    '#fde68a',
-    leftBorder:'#d97706',
-    accentColor:'#d97706',
-    headerColor:'#d97706',
-    btnBg:     '#d97706',
-    iconStroke:'#d97706',
-  },
-  normal: {
-    border:    '#bbf7d0',
-    leftBorder:'#16a34a',
-    accentColor:'#16a34a',
-    headerColor:'#16a34a',
-    btnBg:     '#16a34a',
-    iconStroke:'#16a34a',
-  },
-};
-
 export function AlertCard({ alertText, riskLevel, timestamp, onBroadcast }: AlertCardProps) {
-  const key = (riskLevel || 'normal').toLowerCase() as keyof typeof THEMES;
-  const t = THEMES[key] ?? THEMES.normal;
+  const key = (riskLevel || 'normal').toLowerCase() as RiskLevel;
+  const t = RISK_THEMES[key] ?? RISK_THEMES.normal;
+
+  // Fix 5: Track copy feedback inline — no modal, no blocking
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle');
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(alertText).catch(console.error);
+    navigator.clipboard.writeText(alertText).then(() => {
+      setCopyStatus('copied');
+      setTimeout(() => setCopyStatus('idle'), 2000);
+    }).catch(() => {
+      setCopyStatus('error');
+      setTimeout(() => setCopyStatus('idle'), 3000);
+    });
   };
+
+  const copyLabel =
+    copyStatus === 'copied' ? 'Copied!' :
+    copyStatus === 'error'  ? 'Copy failed' :
+    'Copy';
 
   return (
     <div style={{
@@ -112,20 +103,25 @@ export function AlertCard({ alertText, riskLevel, timestamp, onBroadcast }: Aler
           Send this alert to station manager
         </button>
 
-        <button
-          onClick={handleCopy}
-          title="Copy text"
-          style={{
-            backgroundColor: '#f1f5f9', border: 'none', borderRadius: '8px',
-            color: '#475569', fontSize: '12px', fontWeight: 600,
-            padding: '9px 14px', cursor: 'pointer', flexShrink: 0,
-            transition: 'background-color 0.2s',
-          }}
-          onMouseOver={e => (e.currentTarget.style.backgroundColor = '#e2e8f0')}
-          onMouseOut={e  => (e.currentTarget.style.backgroundColor = '#f1f5f9')}
-        >
-          Copy
-        </button>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px', flexShrink: 0 }}>
+          <button
+            onClick={handleCopy}
+            title="Copy text"
+            style={{
+              backgroundColor: copyStatus === 'error' ? '#fef2f2' : '#f1f5f9',
+              border: 'none', borderRadius: '8px',
+              color: copyStatus === 'error' ? '#dc2626' : copyStatus === 'copied' ? '#16a34a' : '#475569',
+              fontSize: '12px', fontWeight: 600,
+              padding: '9px 14px', cursor: 'pointer',
+              transition: 'background-color 0.2s',
+              minWidth: '68px',
+            }}
+            onMouseOver={e => { if (copyStatus === 'idle') e.currentTarget.style.backgroundColor = '#e2e8f0'; }}
+            onMouseOut={e  => { if (copyStatus === 'idle') e.currentTarget.style.backgroundColor = '#f1f5f9'; }}
+          >
+            {copyLabel}
+          </button>
+        </div>
       </div>
     </div>
   );

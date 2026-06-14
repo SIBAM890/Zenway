@@ -26,8 +26,9 @@ export function useSurgeScore({ station, isDemo, scenario, elapsedSeconds }: Use
       setAssessments(assessmentsData);
       setTrains(trainsData);
       setError(null);
-    } catch (e: any) {
-      setError(e.message || 'Error fetching real-time railway telemetry');
+    } catch (e: unknown) {
+      const message = e instanceof Error ? e.message : String(e);
+      setError(message || 'Error fetching real-time railway telemetry');
       console.error(e);
     } finally {
       setLoading(false);

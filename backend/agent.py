@@ -27,7 +27,7 @@ async def call_gemini_node(state: AgentState) -> Dict[str, Any]:
     started_at = datetime.datetime.now().isoformat()
     
     assessment = state["assessment"]
-    logger.info(f"LangGraph Step 1: Requesting ActionCard from Gemini for Platform {assessment.get('platform_id')}")
+    logger.info(f"LangGraph Step 1: Requesting ActionCard from Gemini for Platform {assessment.get('platform_id')} Score {assessment.get('score')}")
     
     # Call Gemini client
     action_card_raw = await gemini_client.generate_action_card(
@@ -73,7 +73,7 @@ async def call_bhashini_node(state: AgentState) -> Dict[str, Any]:
     
     action_card = state["action_card"]
     assessment = state["assessment"]
-    logger.info(f"LangGraph Step 2: Requesting Bhashini translations for alert summary")
+    logger.info(f"LangGraph Step 2: Requesting Bhashini translations for alert {state['alert_id']} (Platform {assessment.get('platform_id')}, Summary: {action_card['summary'][:60]}...)")
     
     # Call Bhashini client
     announcements = await bhashini_client.translate_announcement(

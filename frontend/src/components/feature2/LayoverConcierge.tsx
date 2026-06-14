@@ -84,8 +84,9 @@ export default function LayoverConcierge() {
         layoverWindow: `Layover (${layoverHours}h)`,
         activities: mappedActivities
       });
-    } catch (err: any) {
-      setError(err.message || 'Failed to generate itinerary');
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      setError(message || 'Failed to generate itinerary');
     } finally {
       setIsLoading(false);
     }

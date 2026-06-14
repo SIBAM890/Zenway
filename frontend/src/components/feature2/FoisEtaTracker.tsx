@@ -93,8 +93,9 @@ export default function FoisEtaTracker() {
       
       setTerminals(validTerminals);
       setLastRefreshed(new Date());
-    } catch (err: any) {
-      setError(err.message || 'Failed to load FOIS data');
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      setError(message || 'Failed to load FOIS data');
     } finally {
       setLoading(false);
     }

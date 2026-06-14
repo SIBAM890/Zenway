@@ -4,5 +4,5 @@ export interface AuditLogEntry {
   timestamp: string;
   station_id: string;
   platform_id?: string;
-  data: Record<string, any>;
+  data: Record<string, unknown>;
 }

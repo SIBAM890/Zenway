@@ -12,7 +12,9 @@ class GeminiClient:
         self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self.cached_path = os.path.join(self.base_dir, "data", "cached_api_responses.json")
         self.api_key = settings.GEMINI_API_KEY
-        self.url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={self.api_key}"
+        # API key is sent in the x-goog-api-key header (not in the URL query string)
+        # to avoid key exposure in server logs, network traces, and browser history.
+        self.url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
 
     def _get_cached_action_card(self, scenario: str, station_id: str, platform_id: str) -> Optional[Dict[str, Any]]:
         try:
@@ -47,10 +49,14 @@ class GeminiClient:
             "{ \"summary\": \"brief explanation of the risk and trains\", \"actions\": [\"action 1\", \"action 2\", \"action 3\", \"action 4\", \"action 5\"], \"time_window\": \"time window (e.g. 10:15 - 10:45)\", \"confidence\": 0.95 }"
         )
         
+        # Security note: all interpolated values (station_id, platform_id, score,
+        # contributing_factors) originate from our own deterministic surge engine,
+        # NOT from raw user input. contributing_factors is json.dumps()'d to
+        # neutralise any embedded newlines or control characters in dict values.
         prompt = (
             f"Generate an action card. Input Data:\n"
-            f"Station: {station_id}\n"
-            f"Platform: {platform_id}\n"
+            f"Station: {station_id.strip()}\n"
+            f"Platform: {platform_id.strip()}\n"
             f"Surge Score: {score}\n"
             f"Contributing Factors: {json.dumps(assessment.get('contributing_factors', {}))}\n"
         )
@@ -67,7 +73,11 @@ class GeminiClient:
                 }
             }
             async with httpx.AsyncClient(timeout=10.0) as client:
-                res = await client.post(self.url, json=body)
+                res = await client.post(
+                    self.url,
+                    json=body,
+                    headers={"x-goog-api-key": self.api_key}
+                )
                 if res.status_code == 200:
                     res_data = res.json()
                     text_content = res_data["candidates"][0]["content"]["parts"][0]["text"]

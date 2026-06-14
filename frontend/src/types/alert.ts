@@ -28,11 +28,31 @@ export interface Operator {
   station_id: string;
 }
 
+/** Input to a LangGraph node step (Gemini or Bhashini). */
+export interface AgentStepInput {
+  assessment_score?: number;
+  factors?: Record<string, number | string>;
+  summary?: string;
+  [key: string]: unknown;
+}
+
+/** Output from a LangGraph node step. */
+export interface AgentStepOutput {
+  alert_id?: string;
+  summary?: string;
+  actions?: string[];
+  time_window?: string;
+  confidence?: number;
+  languages_count?: number;
+  announcements?: unknown[];
+  [key: string]: unknown;
+}
+
 export interface AgentRunStep {
   node: string;
   description: string;
-  input: Record<string, any>;
-  output: Record<string, any>;
+  input: AgentStepInput;
+  output: AgentStepOutput;
   started_at: string;
   completed_at: string;
 }
