@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import './OpsDashboard.css';
 import { Smartphone, Train, Activity, Map, Sun, Moon, Bell } from 'lucide-react';
 import {
   CrewPulseDashboard,
@@ -12,6 +13,15 @@ import { useGlobal } from '../context/GlobalContext';
 export default function ZenwayDashboard() {
   const [activeTab, setActiveTab] = useState<'crew' | 'fois' | 'concierge'>('crew');
   const { theme, toggleTheme, alerts } = useGlobal();
+
+  useEffect(() => {
+    if (!document.getElementById('tailwind-cdn')) {
+      const script = document.createElement('script');
+      script.id = 'tailwind-cdn';
+      script.src = 'https://cdn.tailwindcss.com';
+      document.head.appendChild(script);
+    }
+  }, []);
 
   return (
     <div className={`fixed inset-0 z-[100] overflow-auto font-sans transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-900 text-slate-100' : 'bg-[#f8fafc] text-slate-900'}`}>
