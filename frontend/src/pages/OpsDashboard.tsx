@@ -14,7 +14,7 @@ export default function ZenwayDashboard() {
   const { theme, toggleTheme, alerts } = useGlobal();
 
   return (
-    <div className={`min-h-screen font-sans transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-900 text-slate-100' : 'bg-[#f8fafc] text-slate-900'}`}>
+    <div className={`fixed inset-0 z-[100] overflow-auto font-sans transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-900 text-slate-100' : 'bg-[#f8fafc] text-slate-900'}`}>
       {/* Top Header */}
       <header className={`sticky top-0 z-50 flex items-center justify-between border-b px-6 py-3 shadow-sm transition-colors duration-300 ${theme === 'dark' ? 'border-slate-800 bg-slate-900' : 'border-slate-200 bg-white'}`}>
         <div className="flex items-center gap-3">
